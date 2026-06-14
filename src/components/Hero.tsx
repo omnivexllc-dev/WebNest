@@ -1,0 +1,199 @@
+import { motion } from 'motion/react';
+import { ArrowRight, CheckCircle2, Monitor, Code, TrendingUp, Sparkles } from 'lucide-react';
+
+interface HeroProps {
+  onCtaClick: (sectionId: string) => void;
+}
+
+export default function Hero({ onCtaClick }: HeroProps) {
+  // Stagger configurations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 24, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 15,
+      },
+    },
+  };
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen bg-slate-50/70 pt-28 pb-16 overflow-hidden flex items-center"
+    >
+      {/* Background visual graphics */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 rounded-l-[120px] pointer-events-none -skew-x-12 origin-top-right transition-all duration-1000 hidden md:block" />
+      <div className="absolute -top-10 left-1/3 w-72 h-72 bg-blue-200/20 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-sky-200/35 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left: Headline & Actions */}
+        <motion.div
+          id="hero-pitch"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="lg:col-span-7 flex flex-col justify-center"
+        >
+          {/* Subtle announcement badge */}
+          <motion.div
+            variants={itemVariants}
+            className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full w-max mb-6"
+          >
+            <span className="flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5" />
+              Award Winning Agency
+            </span>
+          </motion.div>
+
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6"
+          >
+            We Build Websites <br />
+            That <span className="text-blue-600">Grow Businesses</span>
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-lg text-slate-500 max-w-xl leading-relaxed mb-8"
+          >
+            WebNest helps businesses establish a powerful online presence through modern web design, development, SEO, and digital solutions.
+          </motion.p>
+
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <button
+              onClick={() => onCtaClick('contact')}
+              className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            >
+              Get Free Consultation
+            </button>
+            <button
+              onClick={() => onCtaClick('portfolio')}
+              className="px-8 py-4 border-2 border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-100 transition-all duration-300 cursor-pointer"
+            >
+              View Our Work
+            </button>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="pt-8 flex flex-wrap items-center gap-10 border-t border-slate-100"
+          >
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-slate-900">500+</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Projects Delivered</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-slate-900">98%</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Client Retention</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-slate-900">15+</span>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Global Awards</span>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Right: Beautiful Premium Graphic Canvas (Simulates interactive coding and layouts) */}
+        <motion.div
+          id="hero-canvas"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="lg:col-span-5 hidden lg:block"
+        >
+          <div className="relative">
+            {/* Main graphic container */}
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-2xl p-6 relative z-10">
+              {/* Fake web browser UI */}
+              <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                <div className="flex space-x-1.5">
+                  <span className="w-3 h-3 bg-red-400 rounded-full inline-block" />
+                  <span className="w-3 h-3 bg-yellow-400 rounded-full inline-block" />
+                  <span className="w-3 h-3 bg-green-400 rounded-full inline-block" />
+                </div>
+                <div className="bg-slate-50 border border-slate-100 px-3 py-1 rounded text-[10px] text-slate-400 w-1/2 text-center overflow-hidden whitespace-nowrap">
+                  https://webnest.io/modern-agency
+                </div>
+                <div className="w-8" />
+              </div>
+
+              {/* Graphical illustration card */}
+              <div className="space-y-4">
+                <div className="flex space-x-4">
+                  {/* Styled component representing design features */}
+                  <div className="w-2/3 bg-blue-50 rounded-xl p-4 flex flex-col justify-between h-36">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center">
+                        <Monitor className="w-4.5 h-4.5" />
+                      </div>
+                      <span className="text-xs font-bold text-slate-800">UI/UX Engine</span>
+                    </div>
+                    <div>
+                      <div className="w-3/4 h-2 bg-blue-200 rounded-full mb-1.5" />
+                      <div className="w-1/2 h-2 bg-blue-200/50 rounded-full" />
+                    </div>
+                  </div>
+                  {/* Secondary stats module */}
+                  <div className="w-1/3 bg-slate-900 rounded-xl p-4 flex flex-col justify-between text-white h-36">
+                    <TrendingUp className="w-6 h-6 text-emerald-400" />
+                    <div>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Traffic Boost</span>
+                      <span className="text-lg font-extrabold text-white">+180%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-9 h-9 rounded-full bg-white border border-slate-100 flex items-center justify-center text-blue-600">
+                      <Code className="w-4.5 h-4.5" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-slate-900 block leading-tight">Optimized Code</span>
+                      <span className="text-[10px] text-slate-400 block leading-tight">Fast-loading React bundles</span>
+                    </div>
+                  </div>
+                  <div className="flex space-x-1">
+                    <span className="w-2 h-4 bg-blue-400 rounded-full block animate-pulse" />
+                    <span className="w-2 h-6 bg-blue-600 rounded-full block" />
+                    <span className="w-2 h-3 bg-blue-300 rounded-full block" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Absolute overlay decor cards */}
+            <div className="absolute -bottom-6 -left-6 bg-white border border-slate-100/80 rounded-xl p-4.5 shadow-xl flex items-center space-x-3 z-20">
+              <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                <CheckCircle2 className="w-5.5 h-5.5" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-slate-900 block leading-none mb-1">99.8% Satisfied</span>
+                <span className="text-[10px] text-slate-400 block leading-none">India-wide Client base</span>
+              </div>
+            </div>
+
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-tr from-blue-600 to-sky-400 rounded-full blur-2xl opacity-20 pointer-events-none -z-10" />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
