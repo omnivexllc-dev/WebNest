@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Layers, Mail, Phone, MapPin, Clock, Twitter, Linkedin, Github, Instagram, Scale } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Twitter, Linkedin, Github, Instagram, Scale } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import WebNestLogo from './WebNestLogo';
 
 interface FooterProps {
   onNavClick: (sectionId: string) => void;
@@ -40,17 +41,17 @@ export default function Footer({ onNavClick }: FooterProps) {
           {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-5 space-y-6">
             <div 
-              className="inline-flex items-center space-x-2.5 cursor-pointer group" 
+              className="inline-flex items-center space-x-2 cursor-pointer group" 
               onClick={() => onNavClick('home')}
             >
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform duration-300">
-                <Layers className="w-5.5 h-5.5" />
+              <div className="w-11 h-11 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <WebNestLogo className="w-11 h-11" isDark={true} />
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight block leading-tight">
-                  Web<span className="text-[#60a5fa] transition-colors duration-300 group-hover:text-blue-500">Nest</span>
+                <span className="text-xl sm:text-2xl font-black text-white tracking-tight block leading-none">
+                  Web<span className="text-[#39b546]">Nest</span>
                 </span>
-                <span className="text-[9px] font-extrabold tracking-widest text-[#71717a] block uppercase">
+                <span className="text-[9px] font-extrabold tracking-widest text-[#71717a] block uppercase mt-0.5">
                   Digital Studio
                 </span>
               </div>

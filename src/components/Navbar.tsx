@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Layers } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import WebNestLogo from './WebNestLogo';
 
 interface NavbarProps {
   onNavClick: (sectionId: string) => void;
@@ -52,17 +53,18 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
         <div 
           id="logo-container"
           onClick={() => handleLinkClick('home')} 
-          className="flex items-center space-x-2.5 cursor-pointer group"
+          className="flex items-center space-x-2 cursor-pointer group"
         >
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg transition-transform duration-300 group-hover:scale-110">
-            <Layers className="w-5.5 h-5.5" />
+          <div className="w-11 h-11 flex items-center justify-center transition-transform duration-350 group-hover:scale-105">
+            <WebNestLogo className="w-11 h-11" isDark={false} />
           </div>
           <div>
-            <span className="text-xl font-bold text-slate-900 tracking-tight block">
-              Web<span className="text-blue-600 font-extrabold">Nest</span>
+            <span className="text-2xl font-black tracking-tight block leading-none">
+              <span className="text-[#0c2340]">Web</span>
+              <span className="text-[#39b546]">Nest</span>
             </span>
-            <span className="text-[9px] font-medium tracking-widest text-slate-400 block uppercase -mt-1">
-              Digital Agency
+            <span className="text-[8px] font-extrabold tracking-widest text-slate-400 block uppercase mt-0.5">
+              Digital Studio
             </span>
           </div>
         </div>
