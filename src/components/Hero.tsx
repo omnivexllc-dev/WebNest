@@ -19,14 +19,15 @@ export default function Hero({ onCtaClick }: HeroProps) {
   };
 
   const itemVariants = {
-    hidden: { y: 0, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         type: 'spring',
         stiffness: 100,
-        damping: 15,
+        damping: 18,
+        mass: 0.8,
       },
     },
   };
