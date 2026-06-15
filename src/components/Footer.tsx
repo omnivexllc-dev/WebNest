@@ -93,12 +93,16 @@ export default function Footer({ onNavClick }: FooterProps) {
             <ul className="space-y-3.5 text-sm">
               {coreServices.map((srv, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => onNavClick(srv.id)}
-                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors text-left"
+                  <a
+                    href={`#${srv.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavClick(srv.id);
+                    }}
+                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors text-left font-medium block"
                   >
-                    <span>{srv.name}</span>
-                  </button>
+                    {srv.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -112,12 +116,16 @@ export default function Footer({ onNavClick }: FooterProps) {
             <ul className="space-y-3.5 text-sm">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => onNavClick(link.id)}
-                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors"
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavClick(link.id);
+                    }}
+                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors font-medium block"
                   >
-                    <span>{link.name}</span>
-                  </button>
+                    {link.name}
+                  </a>
                 </li>
               ))}
             </ul>

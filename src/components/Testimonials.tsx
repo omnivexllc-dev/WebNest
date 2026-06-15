@@ -87,6 +87,9 @@ export default function Testimonials() {
                   <img
                     src={current.avatar}
                     alt={current.name}
+                    width="128"
+                    height="128"
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />

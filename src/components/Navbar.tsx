@@ -72,10 +72,14 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
         {/* Desktop Nav Links */}
         <div id="desktop-links" className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <button
+            <a
               key={link.id}
-              onClick={() => handleLinkClick(link.id)}
-              className={`text-sm font-medium tracking-wide transition-colors relative py-1.5 cursor-pointer ${
+              href={`#${link.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick(link.id);
+              }}
+              className={`text-sm font-medium tracking-wide transition-colors relative py-1.5 cursor-pointer block ${
                 activeSection === link.id
                   ? 'text-blue-600 font-semibold'
                   : 'text-slate-600 hover:text-slate-950'
@@ -88,18 +92,22 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
                   className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"
                 />
               )}
-            </button>
+            </a>
           ))}
         </div>
 
         {/* Action Button */}
         <div id="desktop-action" className="hidden lg:block">
-          <button
-            onClick={() => handleLinkClick('contact')}
-            className="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('contact');
+            }}
+            className="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer inline-block"
           >
             Free Consultation
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle Button */}
@@ -126,23 +134,31 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
           >
             <div className="px-6 py-6 flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <button
+                <a
                   key={link.id}
-                  onClick={() => handleLinkClick(link.id)}
-                  className={`text-base font-semibold tracking-wide py-2 text-left cursor-pointer border-b border-slate-50 ${
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(link.id);
+                  }}
+                  className={`text-base font-semibold tracking-wide py-2 text-left cursor-pointer border-b border-slate-50 block ${
                     activeSection === link.id ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   {link.name}
-                </button>
+                </a>
               ))}
-              <button
-                onClick={() => handleLinkClick('contact')}
-                className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 text-white text-sm font-semibold uppercase tracking-wider py-3.5 rounded-lg hover:bg-slate-900 transition-colors duration-300"
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('contact');
+                }}
+                className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 text-white text-sm font-semibold uppercase tracking-wider py-3.5 rounded-lg hover:bg-slate-900 transition-colors duration-300 text-center"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

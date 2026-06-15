@@ -19,7 +19,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
   };
 
   const itemVariants = {
-    hidden: { y: 24, opacity: 0 },
+    hidden: { y: 0, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -61,13 +61,13 @@ export default function Hero({ onCtaClick }: HeroProps) {
             </span>
           </motion.div>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6"
-          >
-            We Build Websites <br />
-            That <span className="text-blue-600">Grow Businesses</span>
-          </motion.h1>
+          <motion.div variants={itemVariants}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6.5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+              Web Design & <br />
+              <span className="text-blue-600">Development Company</span> <br />
+              <span className="text-2xl sm:text-3xl text-slate-600 font-bold block mt-2.5">in Durgapur, West Bengal</span>
+            </h1>
+          </motion.div>
 
           <motion.p
             variants={itemVariants}
@@ -113,7 +113,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
         {/* Right: Beautiful Premium Graphic Canvas (Simulates interactive coding and layouts) */}
         <motion.div
           id="hero-canvas"
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 0 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="lg:col-span-5 hidden lg:block"
