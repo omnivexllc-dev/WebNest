@@ -1,42 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ChevronDown, HelpCircle, CheckCircle, Smartphone, Globe, Share2 } from 'lucide-react';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
+import { SEO_LOCAL_FAQS, SEO_SERVICE_AREAS } from '../data/textContent.ts';
 
 export default function LocalSEOSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const localFaqs: FAQItem[] = [
-    {
-      question: "Why should businesses in Durgapur choose custom web design over ready-made templates?",
-      answer: "Generic templates are bloated with excess CSS/JS code, making them sluggish—especially on mixed mobile data networks in West Bengal. WebNest builds bespoke React/TypeScript interfaces tailored specifically to your exact parameters. This guarantees sub-second page loads, higher user retention, and superior Conversion Rate Optimization (CRO)."
-    },
-    {
-      question: "How does WebNest optimize websites for local SEO searches in West Bengal?",
-      answer: "We structure deep local SEO schemas, optimize micro-copy targeting relevant queries like 'web design services in Durgapur', map your brand with localized Google Maps Platform tags, configure canonical references, optimize site performance scores, and structure mobile touch targets for effortless local lead generation."
-    },
-    {
-      question: "Do you specialize in e-commerce web design for businesses in West Bengal?",
-      answer: "Yes, absolutely! Since local stores and manufacturers require fast, robust checkout flows, we engineer headless e-commerce structures. By utilizing independent catalog streams linked with Stripe, payment gateways, and shipping APIs, we deliver a lightning-fast experience with secure automated transaction security."
-    },
-    {
-      question: "Do you support on-site consultations for businesses located near B-Zone, City Centre, and Benachity?",
-      answer: "WebNest is proudly headquartered at 2/32 Bankim Chandra Avenue in the B-Zone region of Durgapur. Our engineers and creative visual directors conduct on-site consultations for companies throughout Durgapur, Asansol, Bankura, Burdwan, Haldia, Siliguri, and Kolkata, as well as remote consultations globally."
-    }
-  ];
-
-  const serviceAreas = [
-    { city: 'Durgapur', description: 'Core agency headquarters offering responsive web design and custom database systems.' },
-    { city: 'Asansol', description: 'Heavy industry portal engineering and digitized safety-tracking applications.' },
-    { city: 'Kolkata', description: 'Headless e-commerce suites, corporate portals, and complex SaaS analytics.' },
-    { city: 'Burdwan', description: 'Local agribusiness direct marketplaces and secure digital onboarding solutions.' },
-    { city: 'Haldia', description: 'Industrial enterprise asset logs management and secure portal security.' },
-    { city: 'Siliguri', description: 'Travel booking system integrations, dynamic map overlays, and customer support chatbots.' }
-  ];
 
   return (
     <section id="local-hub" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200/50">
@@ -58,10 +26,10 @@ export default function LocalSEOSection() {
             <MapPin className="w-3.5 h-3.5" />
             <span>Local SEO & Web Authority</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             Elite Web Design & SEO Services <br />
             in Durgapur & West Bengal
-          </h2>
+          </h1>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             From the heart of steel-city Durgapur, WebNest engineers world-class responsive digital platforms. We craft highly intuitive user experiences designed specifically to dominate organic Google rankings, speed up customer conversions, and fuel enterprise growth across West Bengal.
           </p>
@@ -129,7 +97,7 @@ export default function LocalSEOSection() {
                 <span className="text-[9px] text-blue-400 font-extrabold tracking-widest uppercase block mb-2">Regional Coverage Map</span>
                 <h4 className="text-lg font-bold mb-4 tracking-tight">Active Client Support Regions inside West Bengal</h4>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {serviceAreas.map((area, i) => (
+                  {SEO_SERVICE_AREAS.map((area, i) => (
                     <div key={i} className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3 text-left hover:border-blue-500 transition-all duration-300">
                       <span className="text-xs font-bold text-white block mb-0.5">{area.city}</span>
                       <span className="text-[10px] text-slate-400 leading-tight block">{area.description}</span>
@@ -155,7 +123,7 @@ export default function LocalSEOSection() {
               </h3>
 
               <div id="seo-faq-accordion" className="space-y-3.5">
-                {localFaqs.map((faq, index) => {
+                {SEO_LOCAL_FAQS.map((faq, index) => {
                   const isOpen = openIndex === index;
                   return (
                     <div 

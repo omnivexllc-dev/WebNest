@@ -11,6 +11,7 @@ import LocalSEOSection from './components/LocalSEOSection.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import ConsultationChatbot from './components/ConsultationChatbot.tsx';
+import FAQSection from './components/FAQSection.tsx';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -60,7 +61,7 @@ export default function App() {
 
   // IntersectionObserver to sync nav bar underlines dynamically on scroll
   useEffect(() => {
-    const sections = ['home', 'services', 'portfolio', 'why-webnest', 'process', 'about', 'local-hub', 'contact'];
+    const sections = ['home', 'services', 'portfolio', 'why-webnest', 'process', 'about', 'faqs', 'local-hub', 'contact'];
     
     const observers = sections.map((sectionId) => {
       const el = document.getElementById(sectionId);
@@ -125,6 +126,9 @@ export default function App() {
 
         {/* Micro slider client testimonials */}
         <Testimonials />
+
+        {/* Informative FAQ & Knowledge Base Content Block (Over 400 highly optimized text words) */}
+        <FAQSection />
 
         {/* Local SEO & Web Authority Section */}
         <LocalSEOSection />

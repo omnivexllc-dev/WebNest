@@ -50,6 +50,11 @@ async function startServer() {
   // JSON Body parser
   app.use(express.json());
 
+  // Serve llms.txt route for search indexing and LLM tools
+  app.get('/llms.txt', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'llms.txt'));
+  });
+
   // API Route: Test health status
   app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', time: new Date() });

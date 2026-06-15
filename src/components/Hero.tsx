@@ -134,46 +134,71 @@ export default function Hero({ onCtaClick }: HeroProps) {
                 <div className="w-8" />
               </div>
 
+              {/* Interactive Dashboard Graphic Overlay - Optimized via WebP and Responsive SrcSet */}
+              <div className="relative rounded-xl overflow-hidden aspect-video mb-4 border border-slate-100/80 bg-slate-50">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&q=80&w=800"
+                  srcSet="
+                    https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&q=80&w=480 480w,
+                    https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&q=80&w=800 800w,
+                    https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=webp&fit=crop&q=80&w=1200 1200w
+                  "
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  width="800"
+                  height="450"
+                  alt="WebNest high-performance responsive custom web application development dashboard screenshot mockup"
+                  loading="eager"
+                  fetchPriority="high"
+                  className="w-full h-full object-cover select-none brightness-95 hover:scale-105 transition-transform duration-75"
+                />
+                
+                {/* Overlay badge matching high performance metric */}
+                <div className="absolute top-3 right-3 bg-slate-900/90 backdrop-blur-md text-[10px] font-bold text-white px-2.5 py-1 rounded-full uppercase tracking-widest flex items-center gap-1 border border-white/10 shadow-lg">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-ping" />
+                  <span>99+ Speed LCP</span>
+                </div>
+              </div>
+
               {/* Graphical illustration card */}
-              <div className="space-y-4">
-                <div className="flex space-x-4">
+              <div className="space-y-3">
+                <div className="grid grid-cols-3 gap-3">
                   {/* Styled component representing design features */}
-                  <div className="w-2/3 bg-blue-50 rounded-xl p-4 flex flex-col justify-between h-36">
+                  <div className="col-span-2 bg-blue-50/70 rounded-xl p-3 flex flex-col justify-between h-24 border border-blue-100/50">
                     <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center">
-                        <Monitor className="w-4.5 h-4.5" />
+                      <div className="w-6 h-6 rounded bg-blue-500/10 text-blue-600 flex items-center justify-center">
+                        <Monitor className="w-3.5 h-3.5" />
                       </div>
-                      <span className="text-xs font-bold text-slate-800">UI/UX Engine</span>
+                      <span className="text-[10px] font-extrabold text-slate-800 uppercase tracking-wider">UI/UX Engine</span>
                     </div>
                     <div>
-                      <div className="w-3/4 h-2 bg-blue-200 rounded-full mb-1.5" />
-                      <div className="w-1/2 h-2 bg-blue-200/50 rounded-full" />
+                      <div className="w-3/4 h-1.5 bg-blue-200 rounded-full mb-1" />
+                      <div className="w-1/2 h-1.5 bg-blue-200/50 rounded-full" />
                     </div>
                   </div>
                   {/* Secondary stats module */}
-                  <div className="w-1/3 bg-slate-900 rounded-xl p-4 flex flex-col justify-between text-white h-36">
-                    <TrendingUp className="w-6 h-6 text-emerald-400" />
+                  <div className="col-span-1 bg-slate-950 rounded-xl p-3 flex flex-col justify-between text-white h-24 border border-slate-800">
+                    <TrendingUp className="w-4 h-4 text-emerald-400" />
                     <div>
-                      <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Traffic Boost</span>
-                      <span className="text-lg font-extrabold text-white">+180%</span>
+                      <span className="text-[8px] text-slate-400 uppercase tracking-widest block font-bold">Boost</span>
+                      <span className="text-sm font-black text-white leading-none">+180%</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 flex items-center justify-between">
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-9 h-9 rounded-full bg-white border border-slate-100 flex items-center justify-center text-blue-600">
-                      <Code className="w-4.5 h-4.5" />
+                    <div className="w-8 h-8 rounded-full bg-white border border-slate-100 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
+                      <Code className="w-4 h-4" />
                     </div>
                     <div>
                       <span className="text-xs font-bold text-slate-900 block leading-tight">Optimized Code</span>
-                      <span className="text-[10px] text-slate-400 block leading-tight">Fast-loading React bundles</span>
+                      <span className="text-[10px] text-slate-400 block leading-none mt-0.5">Fast-loading React bundles</span>
                     </div>
                   </div>
-                  <div className="flex space-x-1">
-                    <span className="w-2 h-4 bg-blue-400 rounded-full block animate-pulse" />
-                    <span className="w-2 h-6 bg-blue-600 rounded-full block" />
-                    <span className="w-2 h-3 bg-blue-300 rounded-full block" />
+                  <div className="flex space-x-0.5 shrink-0">
+                    <span className="w-1.5 h-3 bg-blue-400 rounded-full block animate-pulse" />
+                    <span className="w-1.5 h-5 bg-blue-600 rounded-full block" />
+                    <span className="w-1.5 h-2.5 bg-blue-300 rounded-full block" />
                   </div>
                 </div>
               </div>

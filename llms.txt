@@ -1,0 +1,41 @@
+# WebNest - Premier Web Design & Development Company in Durgapur, West Bengal
+
+> WebNest delivers elite responsive website design, custom full-stack web development, and search engine optimization (SEO) services tailored for local enterprises and global businesses.
+
+## Key Capabilities & Focus Area Services
+
+### Custom Website Design & UI/UX Engine
+- **Custom Website Design**: Tailored visual brand strategy, high-fidelity prototypes, and typography specification.
+- **Responsive Website Design**: Fluid layout matrix rendering beautifully across mobile touch targets, tablets, and wide screens.
+- **Professional Web Designer**: Creative visual directors configuring premium typography pairing and customized CSS grids.
+
+### Advanced Web Development Services
+- **Website Development Services**: Ultra-fast static rendering and high-performance server-side layouts.
+- **Business Website Development**: Formulating solid enterprise portals, dispatch dashboards, and digital workflows.
+- **Ecommerce Website Development**: Modular inventory synchronization, predictive catalogs, and secure Stripe payment hooks.
+
+### Organic Search Engine Optimization & Growth
+- **SEO Services**: Core Web Vitals optimization, custom schema insertion, and semantic HTML5 structures.
+- **Local SEO Services**: Regional targeting of local search parameters to maximize high-intent organic clicks.
+- **Technical SEO Services**: Reducing Cumulative Layout Shift (CLS) and ensuring rapid Largest Contentful Paint (LCP) speeds.
+
+---
+
+## Service Regions (West Bengal, India)
+- **Local Hub (Durgapur)**: B-Zone, City Centre, Benachity, and surrounding areas.
+- **Kolkata & Asansol**: Support pipelines for digital e-commerce suites and heavy machinery coordination logs.
+- **Burdwan, Haldia, & Siliguri**: Agro-marketplaces, travel aggregators, and secure booking triggers.
+
+---
+
+## Technology Stack & Architectural Integrity
+- **Frontend Engine**: React, next-gen TypeScript modules, custom Motion-guided responsive layouts.
+- **Styling Architecture**: Tailwind CSS framework for supercharged responsive styling without embedded/bloated style sheets.
+- **Backend Architecture**: Secure Node.js / Express servers with integrated secure custom schema routing proxies.
+- **AI Consultation**: Google Gemini 3.5 API integrated server-side with customized context tuning for automated assistant lead acquisition.
+
+---
+
+## Contact Information
+- **Support Desk Email**: webnestsupport@gmail.com
+- **HQ Office Address**: 2/32 Bankim Chandra Avenue, B-Zone, Durgapur, West Bengal, Pin 713205, India
