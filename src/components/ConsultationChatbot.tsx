@@ -117,7 +117,7 @@ export default function ConsultationChatbot() {
       const errMsg: ChatMessage = {
         id: `err-${Date.now()}`,
         role: 'model',
-        text: err.message || 'Apologies, our local node API is currently re-routing traffic. You can mail heena6917@gmail.com directly or submit the main specification sheet below!',
+        text: err.message || 'Apologies, our local node API is currently re-routing traffic. You can mail webnestsupport@gmail.com directly or submit the main specification sheet below!',
         createdAt: new Date().toISOString()
       };
       setMessages((prev) => [...prev, errMsg]);

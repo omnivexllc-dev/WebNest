@@ -155,8 +155,8 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-400 block font-bold uppercase tracking-wider leading-none mb-1">Email Inquiry</span>
-                      <a href="mailto:heena6917@gmail.com" className="text-sm text-white font-semibold block hover:text-blue-400 transition-colors duration-300">
-                        heena6917@gmail.com
+                      <a href="mailto:webnestsupport@gmail.com" className="text-sm text-white font-semibold block hover:text-blue-400 transition-colors duration-300">
+                        webnestsupport@gmail.com
                       </a>
                     </div>
                   </div>

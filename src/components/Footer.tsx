@@ -148,11 +148,11 @@ export default function Footer({ onNavClick }: FooterProps) {
               </li>
               <li>
                 <a 
-                  href="mailto:heena6917@gmail.com" 
+                  href="mailto:webnestsupport@gmail.com" 
                   className="text-[#52525b] hover:text-[#a1a1aa] flex items-center gap-2.5 transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#71717a] shrink-0" />
-                  <span>heena6917@gmail.com</span>
+                  <span>webnestsupport@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-[#52525b]">

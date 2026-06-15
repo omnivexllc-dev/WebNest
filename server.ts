@@ -113,7 +113,7 @@ async function startServer() {
       } catch (apiKeyErr: any) {
         return res.status(500).json({
           error: 'Consultation Chatbot initialized, but API is pending configurations. Open Settings secret block.',
-          text: 'Hi, I am NestBot! I am initialized, but our server-side API Key is pending registration in Settings > Secrets. You can still email us at heena6917@gmail.com or call us directly!'
+          text: 'Hi, I am NestBot! I am initialized, but our server-side API Key is pending registration in Settings > Secrets. You can still email us at webnestsupport@gmail.com or call us directly!'
         });
       }
 
@@ -166,7 +166,7 @@ Be humble, objective, incredibly helpful, and polite. Keep responses brief, spac
         }
       });
 
-      const responseText = response.text || 'I have recorded your specifications. Best to write us on heena6917@gmail.com.';
+      const responseText = response.text || 'I have recorded your specifications. Best to write us on webnestsupport@gmail.com.';
       return res.json({ text: responseText });
     } catch (err: any) {
       console.error('Gemini chatbot transaction failed:', err);
