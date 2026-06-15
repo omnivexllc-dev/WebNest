@@ -63,8 +63,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
           <motion.div variants={itemVariants}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-              WebNest | Premium Web Design & <br />
-              <span className="text-blue-600">Development Company</span> <br />
+              WebNest | Best <br />
+              <span className="text-blue-600">Web Design & Development Company</span> <br />
               <span className="text-2xl sm:text-3xl text-slate-600 font-bold block mt-2.5">in Durgapur, West Bengal</span>
             </h1>
           </motion.div>
