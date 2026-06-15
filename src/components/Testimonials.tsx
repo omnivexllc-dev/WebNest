@@ -25,7 +25,14 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Header Section */}
-        <div id="testimonials-header" className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          id="testimonials-header"
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Client Satisfaction
           </span>
@@ -35,10 +42,17 @@ export default function Testimonials() {
           <p className="text-slate-500 text-base">
             Read case testimonies from companies who have escalated their active conversion rates, built beautiful UI systems, and updated workflows with WebNest.
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel slide layout */}
-        <div id="testimonial-carousel-container" className="max-w-4xl mx-auto relative px-4 md:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          id="testimonial-carousel-container"
+          className="max-w-4xl mx-auto relative px-4 md:px-12"
+        >
           
           <AnimatePresence mode="wait">
             <motion.div
@@ -118,7 +132,7 @@ export default function Testimonials() {
               <ChevronRight className="w-5 h-5 shrink-0" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

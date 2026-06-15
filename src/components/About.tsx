@@ -31,7 +31,13 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column: Narrative description & bullet statistics */}
-          <div className="lg:col-span-6 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="lg:col-span-6 space-y-6"
+          >
             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-2">
               About WebNest
             </span>
@@ -59,18 +65,38 @@ export default function About() {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Values cards grid */}
-          <div className="lg:col-span-6 space-y-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15 }
+              }
+            }}
+            className="lg:col-span-6 space-y-6"
+          >
             <span className="text-[10px] text-slate-400 font-extrabold tracking-widest uppercase block mb-2">
               OUR CORE OPERATIONAL PILLARS
             </span>
             {coreValues.map((val, index) => {
               const ValueIcon = val.icon;
               return (
-                <div
+                <motion.div
                   key={index}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { type: 'spring', stiffness: 100, damping: 15 }
+                    }
+                  }}
                   className="bg-slate-50/70 hover:bg-white border border-slate-200/60 hover:border-blue-600 hover:shadow-xl hover:shadow-blue-200/30 p-6 rounded-2xl transition-all duration-300 flex items-start space-x-5 shadow-sm"
                 >
                   <div className="w-12 h-12 bg-white text-slate-900 border border-slate-200/60 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
@@ -84,10 +110,10 @@ export default function About() {
                       {val.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
 
         </div>
       </div>

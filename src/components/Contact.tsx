@@ -89,7 +89,14 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Header Section */}
-        <div id="contact-header" className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          id="contact-header"
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Get In Touch
           </span>
@@ -99,13 +106,19 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
           <p className="text-slate-500 text-base">
             Have an outstanding design requirement or high performance software spec? Drop us a line of details, click submit, and we will initiate details.
           </p>
-        </div>
+        </motion.div>
 
         {/* Main Grid: Form, Info, Map */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           
           {/* Info Card Col */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.6, type: 'spring', damping: 20 }}
+            className="lg:col-span-5 flex flex-col justify-between space-y-8"
+          >
             
             {/* Quick Connect parameters list */}
             <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl relative overflow-hidden flex-1 flex flex-col justify-between">
@@ -222,10 +235,18 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Inquiry Form Col */}
-          <div id="contact-form-card" className="lg:col-span-1" style={{ flexGrow: 7, flexBasis: '0%' }}>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.6, type: 'spring', damping: 20, delay: 0.1 }}
+            id="contact-form-card"
+            className="lg:col-span-1"
+            style={{ flexGrow: 7, flexBasis: '0%' }}
+          >
             <div className="bg-white border border-slate-200/60 rounded-3xl p-8 md:p-10 shadow-2xl shadow-slate-200/40 h-full flex flex-col justify-between">
               
               <AnimatePresence mode="wait">
@@ -409,7 +430,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
               </AnimatePresence>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

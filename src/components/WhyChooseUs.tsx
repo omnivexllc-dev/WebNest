@@ -92,7 +92,14 @@ export default function WhyChooseUs() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         {/* Header Section */}
-        <div id="why-header" className="text-center max-w-2xl mx-auto mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          id="why-header"
+          className="text-center max-w-2xl mx-auto mb-20"
+        >
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             The WebNest Difference
           </span>
@@ -102,7 +109,7 @@ export default function WhyChooseUs() {
           <p className="text-slate-500 text-base">
             We merge stunning creative design concepts with clean, modern coding architecture to deliver systems that establish trust instantly and fuel direct business growth.
           </p>
-        </div>
+        </motion.div>
 
         {/* Bento Grid layout */}
         <motion.div
@@ -152,7 +159,14 @@ export default function WhyChooseUs() {
         </motion.div>
 
          {/* Dynamic Interactive Stats bar */}
-        <div id="stats-banner" className="mt-20 border border-slate-100 rounded-3xl bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, type: 'spring', damping: 20 }}
+          id="stats-banner"
+          className="mt-20 border border-slate-100 rounded-3xl bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden"
+        >
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:32px_32px] opacity-10" />
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -180,7 +194,7 @@ export default function WhyChooseUs() {
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mt-2">Satisfaction Rate</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export default function Portfolio() {
   const [activeItem, setActiveItem] = useState<PortfolioItem | null>(null);
 
   // Extract unique categories
-  const categories = ['All', 'SaaS Platform', 'E-commerce / Fintech', 'E-Commerce', 'AI Solution'];
+  const categories = ['All', 'E-Commerce', 'Enterprise Portal', 'Fintech / Insurtech', 'SaaS Platform', 'Web Application', 'Healthcare Solution'];
 
   // Filter products
   const filteredPortfolio = selectedCategory === 'All'
@@ -52,7 +52,14 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Header Section */}
-        <div id="portfolio-header" className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          id="portfolio-header"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6"
+        >
           <div>
             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
               Portfolio Showcase
@@ -64,7 +71,7 @@ export default function Portfolio() {
           <p className="text-slate-600 max-w-lg text-sm sm:text-base">
             Explore a curation of high-end web platforms, custom dashboards, transactional payment solutions, and bespoke user interfaces representing our commitment to quality.
           </p>
-        </div>
+        </motion.div>
 
         {/* Category Filter Pills */}
         <div id="portfolio-filters" className="flex flex-wrap items-center gap-2.5 mb-12">
@@ -120,77 +127,110 @@ export default function Portfolio() {
                   {/* Dynamic Graphic Preview based on Project Subject */}
                   <div className="flex-1 flex flex-col justify-center relative z-10 px-4">
                     {project.id === 'portfolio-1' && (
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-center text-slate-300">
-                          <span className="text-xs font-semibold uppercase tracking-wider">Revenue Pulse Analytics</span>
-                          <span className="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">+340%</span>
-                        </div>
-                        <div className="flex gap-2.5 h-20 items-end">
-                          <div className="w-[10%] bg-blue-500/20 h-[30%] rounded-t" />
-                          <div className="w-[10%] bg-blue-500/35 h-[50%] rounded-t" />
-                          <div className="w-[10%] bg-blue-500/50 h-[40%] rounded-t" />
-                          <div className="w-[10%] bg-blue-500/70 h-[70%] rounded-t" />
-                          <div className="w-[10%] bg-blue-500/40 h-[55%] rounded-t" />
-                          <div className="w-[10%] bg-blue-500/80 h-[80%] rounded-t" />
-                          <div className="w-[10%] bg-blue-600 h-[100%] rounded-t relative">
-                            <span className="absolute -top-1 left-1/2 w-1.5 h-1.5 bg-sky-200 rounded-full inline-block -translate-x-1/2 animate-ping" />
+                      <div className="space-y-3.5">
+                        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">🛒</div>
+                            <div>
+                              <span className="text-xs font-semibold text-slate-200 block">Apex Premium Retail</span>
+                              <span className="text-[10px] text-slate-500 block">Sub-seconds catalog render</span>
+                            </div>
                           </div>
+                          <span className="text-xs font-bold text-slate-300 font-mono">$199.00</span>
                         </div>
-                        <div className="w-full h-1 bg-slate-800 rounded-full overflow-hidden">
-                          <div className="w-5/6 h-full bg-blue-500" />
+                        <div className="flex items-center justify-between text-slate-400 text-[10px] font-semibold tracking-wide bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-lg max-w-sm mx-auto">
+                          <span className="text-emerald-400 font-bold">✓ SECURED BY STRIPE</span>
+                          <span className="font-mono text-emerald-400 font-bold">1.1s Page Load</span>
                         </div>
                       </div>
                     )}
 
                     {project.id === 'portfolio-2' && (
-                      <div className="space-y-3.5 flex flex-col items-center">
-                        <div className="w-14 h-14 bg-gradient-to-tr from-sky-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-extrabold text-2xl shadow-lg">
-                          D
-                        </div>
-                        <span className="text-sm font-semibold tracking-wide text-white uppercase leading-none">DEXPAY FINTECH</span>
-                        <div className="flex space-x-1 items-center bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">
-                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                          <span className="text-[10px] font-bold text-slate-400 tracking-wider font-mono">Secured Stripe Verified</span>
+                      <div className="space-y-3">
+                        <div className="bg-slate-900/90 border border-slate-800/80 p-3 rounded-xl">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-[10px] uppercase font-bold text-slate-400 font-mono">Site-27 Daily Log</span>
+                            <span className="text-[10px] text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded font-bold">PWA Offline</span>
+                          </div>
+                          <div className="space-y-1.5 text-[11px]">
+                            <div className="flex justify-between text-slate-300">
+                              <span>Crane-04 Operation status</span>
+                              <span className="font-bold text-emerald-400">✓ Active</span>
+                            </div>
+                            <div className="flex justify-between text-slate-300">
+                              <span>Structural CAD blueprint</span>
+                              <span className="font-bold text-blue-400">v3.4 synced</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     )}
 
                     {project.id === 'portfolio-3' && (
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-3 gap-2">
-                          <div className="bg-slate-900 border border-slate-800 p-2.5 rounded-xl text-center">
-                            <span className="text-[10px] text-slate-500 block">Dispatch</span>
-                            <span className="text-xs font-bold text-emerald-400">98% Match</span>
-                          </div>
-                          <div className="bg-slate-900 border border-slate-800 p-2.5 rounded-xl text-center">
-                            <span className="text-[10px] text-slate-500 block">Hub Node</span>
-                            <span className="text-xs font-bold text-white">Durgapur</span>
-                          </div>
-                          <div className="bg-slate-900 border border-slate-800 p-2.5 rounded-xl text-center">
-                            <span className="text-[10px] text-slate-500 block">Pricing</span>
-                            <span className="text-xs font-bold text-blue-400">Locked</span>
-                          </div>
+                      <div className="space-y-3.5">
+                        <div className="bg-slate-900 border border-slate-800 p-2.5 rounded-xl text-center">
+                          <span className="text-[10px] text-slate-500 block">SwiftInsure Engine</span>
+                          <span className="text-xs font-extrabold text-blue-400">Basic Tier Premium: $120 / Mo</span>
                         </div>
-                        <div className="flex items-center space-x-2 bg-slate-905 border border-slate-800 p-2 rounded-lg text-slate-400 text-[10px] font-mono justify-center">
-                          <Layers className="w-3.5 h-3.5 text-blue-500" />
-                          <span>Google Maps location tags successfully parsed</span>
+                        <div className="grid grid-cols-2 gap-2 text-center">
+                          <div className="bg-slate-900 border border-slate-800 p-2 rounded-lg">
+                            <span className="text-[10px] text-slate-500 block">Auto-Approved</span>
+                            <span className="text-xs font-bold text-emerald-400">92%</span>
+                          </div>
+                          <div className="bg-slate-900 border border-slate-800 p-2 rounded-lg">
+                            <span className="text-[10px] text-slate-500 block">Calculation</span>
+                            <span className="text-xs font-bold text-white">&lt; 30 sec</span>
+                          </div>
                         </div>
                       </div>
                     )}
 
                     {project.id === 'portfolio-4' && (
                       <div className="space-y-3">
-                        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center space-x-3 max-w-sm mx-auto">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-                          <div className="flex-1 space-y-1">
-                            <div className="w-1/2 h-2 bg-slate-700 rounded" />
-                            <div className="w-5/6 h-2 bg-slate-700/60 rounded" />
+                        <div className="flex justify-between items-center text-slate-300 mb-1">
+                          <span className="text-xs font-semibold uppercase tracking-wider font-mono">Zenith Stock Index</span>
+                          <span className="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">+340 ticks/s</span>
+                        </div>
+                        <div className="flex gap-2 h-16 items-end justify-center">
+                          <div className="w-[12%] bg-blue-500/10 h-[25%] rounded-t" />
+                          <div className="w-[12%] bg-blue-500/25 h-[40%] rounded-t" />
+                          <div className="w-[12%] bg-blue-500/40 h-[35%] rounded-t" />
+                          <div className="w-[12%] bg-blue-500/60 h-[70%] rounded-t" />
+                          <div className="w-[12%] bg-blue-500/30 h-[50%] rounded-t" />
+                          <div className="w-[12%] bg-blue-500/75 h-[85%] rounded-t" />
+                          <div className="w-[12%] bg-blue-600 h-[100%] rounded-t relative">
+                            <span className="absolute -top-1 left-1/2 w-1.5 h-1.5 bg-sky-200 rounded-full inline-block -translate-x-1/2 animate-ping" />
                           </div>
                         </div>
-                        <div className="bg-blue-600 p-3 rounded-xl flex items-center space-x-3 max-w-xs ml-auto">
-                          <p className="text-[10px] font-medium text-white leading-normal">
-                            Consultation details received. Generating mock proposal...
-                          </p>
+                      </div>
+                    )}
+
+                    {project.id === 'portfolio-5' && (
+                      <div className="space-y-3">
+                        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl">
+                          <div className="flex justify-between items-center pb-2 border-b border-slate-800/80 mb-2">
+                            <span className="text-[10px] font-bold text-slate-300">LuxeSpace Unit 4B</span>
+                            <span className="text-[10px] font-mono text-emerald-400 font-bold">$1,420,000</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-[10px] text-slate-500">Interactive Map Marker</span>
+                            <span className="text-[10px] font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Active Booking</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {project.id === 'portfolio-6' && (
+                      <div className="space-y-3">
+                        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center space-x-3.5">
+                          <div className="w-9 h-9 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">♥</div>
+                          <div className="flex-1">
+                            <span className="text-xs font-semibold text-slate-200 block">CarePulse Medical Portal</span>
+                            <span className="text-[10px] text-emerald-400 block font-semibold font-mono">✓ Online Intake Complete</span>
+                          </div>
+                        </div>
+                        <div className="text-center text-[10px] text-slate-500 bg-slate-900/60 p-1.5 rounded border border-slate-800">
+                          Scheduled Sunday, 9:30 AM — Dr. Mitchell
                         </div>
                       </div>
                     )}
@@ -294,6 +334,38 @@ export default function Portfolio() {
                       {activeItem.longDescription}
                     </p>
                   </div>
+
+                  {activeItem.challenge && (
+                    <div className="border-l-4 border-amber-500 bg-amber-500/5 p-4.5 rounded-r-xl">
+                      <span className="text-xs font-bold text-amber-700 uppercase tracking-widest block mb-1.5">Business Challenge</span>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {activeItem.challenge}
+                      </p>
+                    </div>
+                  )}
+
+                  {activeItem.solution && (
+                    <div className="border-l-4 border-blue-600 bg-blue-50 p-4.5 rounded-r-xl">
+                      <span className="text-xs font-bold text-blue-700 uppercase tracking-widest block mb-1.5">Strategic Solution</span>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {activeItem.solution}
+                      </p>
+                    </div>
+                  )}
+
+                  {activeItem.results && activeItem.results.length > 0 && (
+                    <div>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3">Measurable Results</span>
+                      <ul className="space-y-2.5">
+                        {activeItem.results.map((result, idx) => (
+                          <li key={idx} className="flex items-start text-sm text-slate-600">
+                            <span className="text-emerald-500 mr-2.5 shrink-0 font-bold">✓</span>
+                            <span>{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <div className="grid grid-cols-2 gap-4 bg-slate-50 p-4.5 rounded-xl border border-slate-100">
                     <div>

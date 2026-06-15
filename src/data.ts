@@ -62,47 +62,111 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const PORTFOLIO_DATA: PortfolioItem[] = [
   {
     id: 'portfolio-1',
-    title: 'Pulse Analytics',
-    category: 'SaaS Platform',
-    description: 'A cutting-edge visual dashboard helping modern enterprises visualize high-velocity streaming sales and advertising metrics.',
-    longDescription: 'Pulse Analytics is an enterprise-grade web application equipped with interactive maps, customized metric charts, and downloadable CSV summaries. We designed a clean dark theme utilizing premium typography and micro-animations to highlight real-time streaming pipelines.',
-    image: 'SaaS Analytics Platform Dashboard featuring interactive multi-series area charts',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Express'],
-    stats: { label: 'Inbound Growth', value: '+340%' },
-    status: 'Completed'
+    title: 'ApexRetail Headless E-Commerce Suite',
+    category: 'E-Commerce',
+    description: 'A custom headless e-commerce store with an ultra-fast dynamic catalog, robust Stripe payment integrations, and direct automated inventory sync.',
+    longDescription: 'ApexRetail is a high-volume shopping experience configured to run entirely decoupled from traditional hosting constraints. By re-architecting their checkout funnel with motion-guided step-by-step progress and modular edge-caching configurations, catalog navigation became instant and client friction plummeted.',
+    image: 'Headed mockup of Luxe Retail Web application with product filter slideouts',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Express', 'Stripe API', 'Redis'],
+    stats: { label: 'Cart Abandonment Drop', value: '-45%' },
+    status: 'Completed',
+    challenge: 'ApexRetail suffered from a high shopping cart abandonment rate (68%) triggered by slow product catalog rendering speeds (4.8s page load times) and fragmented payment integrations that periodically dropped connection during peak sales periods.',
+    solution: 'We engineered a React-based headless frontend combined with an Express API proxy, integrated global CDN caching for catalog listings, set up Redis-backed inventory sync, and deployed Stripe Checkout with automated payment retry routines.',
+    results: [
+      'Reduced global page load speed from 4.8s down to a steady 1.1s',
+      'Lowered cart abandonment rates from 68% to 23%, boosting net revenue by 32%',
+      'Safely processed over 50,000 concurrent checkout attempts during holiday sales events without failure'
+    ]
   },
   {
     id: 'portfolio-2',
-    title: 'Fintech DexPay Logo',
-    category: 'E-commerce / Fintech',
-    description: 'An optimized mobile-first checkout gateway integrating multiple payment providers with sub-millisecond payment confirmation.',
-    longDescription: 'DexPay represents high craftsmanship in transactional design. By redesigning their checkout funnel with motion-guided step-by-step progress and integrated regional payment solutions, checkout friction plummeted.',
-    image: 'Fintech Payment Gateway interface on mobile and tablet devices',
-    tech: ['Next.js', 'Tailwind', 'Stripe API', 'Zustand', 'PostgreSQL'],
-    stats: { label: 'Conversion Lift', value: '+42.5%' },
-    status: 'Completed'
+    title: 'Vanguard Construction Portal',
+    category: 'Enterprise Portal',
+    description: 'A heavy-equipment coordination, project scheduling, and digital blueprint compliance suite designed for offline field foremen.',
+    longDescription: 'Vanguard Builders required a unified enterprise platform to synchronize raw building logs, active materials dispatch, blueprint file changes, and safety checklists between field construction staff and corporate managers.',
+    image: 'Enterprise structural workflow manager with interactive schedule timelines',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'Node.js', 'PostgreSQL'],
+    stats: { label: 'Idle Delay Reduction', value: '34%' },
+    status: 'Completed',
+    challenge: 'Vanguard Builders lacked unified dispatch tracking for their expensive fleet of construction apparatus, resulting in costly operator idle delays, missing material checklists, and manual paper blueprints that quickly became stale.',
+    solution: 'We developed an offline-first Progressive Web App (PWA) incorporating local storage sync via IndexedDB, custom dispatch scheduling layouts, and high-performance interactive blueprint viewers with real-time vector annotations.',
+    results: [
+      'Eliminated 100% of physical paper logging sheets, replacing them with offline-first tablet interfaces',
+      'Saved an estimated $120,000 per multi-acre project site by optimizing heavy-equipment dispatching',
+      'Increased site safety checklist submission compliance logs by over 400%'
+    ]
   },
   {
     id: 'portfolio-3',
-    title: 'AgroGreen Marketplace',
-    category: 'E-Commerce',
-    description: 'A sustainable digital marketplace enabling local farmers to list organic produce and sell directly to metro grocery suppliers.',
-    longDescription: 'AgroGreen supports India\'s organic farmers. Featuring geolocation-cached maps of nearby storage nodes, real-time demand charts, and localized WhatsApp message notifications for dispatching goods.',
-    image: 'Eco-friendly organic produce digital marketplace with high-density grid listing',
-    tech: ['React v19', 'Framer Motion', 'Node.js', 'Google Maps API'],
-    stats: { label: 'Farmer Earnings', value: '+28%' },
-    status: 'Completed'
+    title: 'SwiftInsure Quote Engine',
+    category: 'Fintech / Insurtech',
+    description: 'A lightning-fast insurance quote estimator that calculates dynamic eligibility criteria, risk factors, and policy estimates in under 30 seconds.',
+    longDescription: 'SwiftInsure digital onboarding system processes complicated, regulated questionnaires through dynamic mathematical formula blocks to output customizable coverage tiers with instant pricing.',
+    image: 'Minimalist insurtech onboarding interface featuring dynamic calculation components',
+    tech: ['React', 'Highcharts', 'Tailwind CSS', 'Zustand', 'Express API'],
+    stats: { label: 'Onboarding Duration', value: '< 30s' },
+    status: 'Completed',
+    challenge: 'Traditional insurance quote qualification at SwiftInsure took up to 3 business days, requiring extensive client phone calls and exhaustive manual risk worksheets, which lost dozens of prospective online conversions daily.',
+    solution: 'We engineered an interactive multi-step calculator with customizable, high-speed calculation logic. It parses risk datasets instantly and presents detailed options with rich visual charts illustrating premium benefits.',
+    results: [
+      'Successfully qualified 92% of users automatically without human agent intervention required',
+      'Expanded total weekly premium quote registrations by 210%',
+      'Decreased user onboarding costs by 58% in the first three months of operation'
+    ]
   },
   {
     id: 'portfolio-4',
-    title: 'VeloAI Virtual Assistant',
-    category: 'AI Solution',
-    description: 'Integrates real-time custom large language models to automate legal document triage and customer service inquiries.',
-    longDescription: 'We designed the Web SDK widget and main dashboard for VeloAI. This client onboarding system uses streaming vector grounding to answer highly regulated questions instantly.',
-    image: 'Minimalist enterprise conversational chat interface with dynamic graphs',
-    tech: ['Gemini API', 'TypeScript', 'Vite', 'Express', 'Tailwind CSS'],
-    stats: { label: 'Automation rate', value: '88%' },
-    status: 'Completed'
+    title: 'Zenith Stock Analytics Platform',
+    category: 'SaaS Platform',
+    description: 'A high-velocity transaction and analytical telemetry dashboard mapping live market ticks, portfolios, and automatic asset alert tracking.',
+    longDescription: 'Zenith requested a high-performance web dashboard capable of plotting real-time stock indexes, executing instant portfolio stress tests, and dispatching alert notifications to hundreds of active traders with zero buffer latency.',
+    image: 'Financial market analysis module displaying multiple color-coded candles and indexes',
+    tech: ['React', 'TypeScript', 'D3.js', 'WebSockets', 'Web Workers', 'Express'],
+    stats: { label: 'Chart Render Delay', value: '< 8ms' },
+    status: 'Completed',
+    challenge: 'Plotting multiple high-frequency stock tickers streams over WebSockets caused severe browser thread blocking and UI freezing on typical laptop displays.',
+    solution: 'We designed a custom rendering pipeline offloading intense mathematical analysis to background Web Workers, updating an optimized canvas layer with dynamic virtualized tables to limit repaints.',
+    results: [
+      'Achieved a super-responsive tick render speed of under 8 milliseconds at 10,000 ticks/sec',
+      'Allowed client portfolios mock audits to calculate in under 120ms with Rust-compiled assemblies',
+      'Scaled system architecture to easily support up to 15,000 daily concurrent traders'
+    ]
+  },
+  {
+    id: 'portfolio-5',
+    title: 'LuxeSpace Intelligent Real Estate Portal',
+    category: 'Web Application',
+    description: 'An immersive digital listing search engine with vector masterplans, structural layout maps, and online agent booking triggers.',
+    longDescription: 'LuxeSpace is a premium residential property agency. We designed a gorgeous, typography-led real estate experience enabling high-net-worth buyers to filter available units via interactive maps and schedule private viewings instantly.',
+    image: 'Elegant real estate catalog highlighting luxury real-estate with custom maps',
+    tech: ['Next.js', 'Tailwind CSS', 'Google Maps API', 'Framer Motion', 'MongoDB'],
+    stats: { label: 'Lead Conversions', value: '+54%' },
+    status: 'Completed',
+    challenge: 'Property searchers felt traditional gallery grids were sterile and unhelpful, lacking real-world geographical perspective and neighborhood context required for premium high-investment purchases.',
+    solution: 'We integrated modern, beautifully stylized map overlays tracking local points of interest, nearby educational facilities, and interactive floor plans showing accurate sun exposure angles.',
+    results: [
+      'Grew scheduled physical site tours by 54% due to immersive map filters',
+      'Assisted in selling out a $45M luxury condominium community 2 months ahead of target schedule',
+      'Increased average prospective buyer session time on site to over 6 minutes'
+    ]
+  },
+  {
+    id: 'portfolio-6',
+    title: 'CarePulse Integrated Medical Clinic Suite',
+    category: 'Healthcare Solution',
+    description: 'A secure, HIPAA-compliant patient dashboard streamlining check-in forms, doctor availability, and online medical history management.',
+    longDescription: 'CarePulse required an incredibly simple, accessible patient portal to automate lobby check-ins, medical questionnaires, and direct physician calendar reservations without manual administrative overhead.',
+    image: 'Patient dashboard interface displaying upcoming medical checkups and logs',
+    tech: ['React', 'Tailwind CSS', 'Calendar Sync API', 'Express', 'NodeMailer', 'Supabase'],
+    stats: { label: 'Intake Processing', value: '-80% Time' },
+    status: 'Completed',
+    challenge: 'Long check-in queues, back-and-forth scheduling phone calls, and manual transcription of messy paper forms resulted in clinician fatigue and elevated data transcription errors.',
+    solution: 'We built an ultra-clean, high-contrast, accessible patient dashboard coupled with dynamic intake validations, deep doctor-calendar syncing, and automated SMS reminder streams.',
+    results: [
+      'Reduced typical lobby patience intake registration times from 20 minutes to under 4 minutes',
+      'Lowered appointment cancellations and missed appointments by 67% using automated smart reminders',
+      'Saved administrative staff an estimated 22 hours per week in patient check-in duties'
+    ]
   }
 ];
 

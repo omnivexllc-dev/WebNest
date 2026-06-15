@@ -16,6 +16,9 @@ export interface PortfolioItem {
   tech: string[];
   stats: { label: string; value: string };
   status: 'Completed' | 'In Progress';
+  challenge?: string;
+  solution?: string;
+  results?: string[];
 }
 
 export interface TestimonialItem {

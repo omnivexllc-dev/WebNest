@@ -23,7 +23,14 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Header Section */}
-        <div id="process-header" className="text-center max-w-2xl mx-auto mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          id="process-header"
+          className="text-center max-w-2xl mx-auto mb-20"
+        >
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Our Strategy
           </span>
@@ -33,18 +40,25 @@ export default function Process() {
           <p className="text-slate-500 text-base">
             From your introductory consultation to final production launch and support, we execute a meticulous step-by-step strategy ensuring zero downtime and elite output.
           </p>
-        </div>
+        </motion.div>
 
         {/* Process Interaction block (Timeline layout + Active view) */}
         <div id="process-timeline-layout" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Vertical timeline steps selectors */}
-          <div className="lg:col-span-5 space-y-4">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            className="lg:col-span-5 space-y-4"
+          >
             <span className="text-[10px] text-slate-400 font-extrabold tracking-widest uppercase block mb-2">
               SELECT PROGRESS STAGES
             </span>
             {PROCESS_DATA.map((step, index) => (
-              <button
+              <motion.button
+                variants={itemVariants}
                 key={step.step}
                 onClick={() => setActiveStepIndex(index)}
                 className={`w-full text-left p-4.5 rounded-xl border flex items-center space-x-4 cursor-pointer transition-all duration-300 ${
@@ -81,12 +95,18 @@ export default function Process() {
                     {step.description}
                   </span>
                 </div>
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Right Column: Active Step Details view (animated) */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="lg:col-span-7"
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStepIndex}
@@ -153,7 +173,7 @@ export default function Process() {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
