@@ -60,8 +60,8 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
           </div>
           <div>
             <span className="text-2xl font-black tracking-tight block leading-none">
-              <span className="text-[#0c2340]">Web</span>
-              <span className="text-[#39b546]">Nest</span>
+              <span className="text-[#04152d]">Web</span>
+              <span className="text-[#005eff]">Nest</span>
             </span>
             <span className="text-[8px] font-extrabold tracking-widest text-slate-400 block uppercase mt-0.5">
               Digital Studio

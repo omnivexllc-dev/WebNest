@@ -49,7 +49,7 @@ export default function Footer({ onNavClick }: FooterProps) {
               </div>
               <div>
                 <span className="text-xl sm:text-2xl font-black text-white tracking-tight block leading-none">
-                  Web<span className="text-[#39b546]">Nest</span>
+                  Web<span className="text-[#005eff]">Nest</span>
                 </span>
                 <span className="text-[9px] font-extrabold tracking-widest text-[#71717a] block uppercase mt-0.5">
                   Digital Studio
