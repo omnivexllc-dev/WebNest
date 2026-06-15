@@ -46,11 +46,11 @@ export default function About() {
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Based in Durgapur, West Bengal, WebNest is a premium digital product and web engineering studio. We combine world-class visual design craftsmanship with rigorous full-stack software development to establish high authority, secure, and fast-loading websites for localized and global companies.
+              As a leading <strong className="font-semibold text-slate-900">Website Design Company in Durgapur</strong>, WebNest is the premier destination for high-profile <strong className="font-semibold text-slate-900">Website Design</strong>, next-gen <strong className="font-semibold text-slate-900">Web Development Services in Durgapur</strong>, and organic <strong className="font-semibold text-slate-900">SEO Services in Durgapur</strong>. Whether you are actively seeking a top-tier <strong className="font-semibold text-slate-900">Website Designer Near Me</strong>, custom <strong className="font-semibold text-slate-900">Ecommerce Website Development</strong>, or an <strong className="font-semibold text-slate-900">Affordable Website Design Company</strong> with deep regional expertise, our certified software engineers configure high authority projects built to scale.
             </p>
 
             <p className="text-slate-600 text-sm leading-relaxed">
-              We operate with structural honesty. By completely bypassing typical cookie-cutter template patterns and constructing custom software suites (built on React, next-gen TypeScript, Node, and Postgres databases), our applications stay responsive under traffic surges and drive long term commercial successes.
+              We specialize in custom <strong className="font-semibold text-slate-800">Business Website Creation</strong>, high-performance <strong className="font-semibold text-slate-800">Responsive Website Design</strong>, full-scale <strong className="font-semibold text-slate-800">Ecommerce Development</strong>, <strong className="font-semibold text-slate-800">Digital Marketing</strong>, and <strong className="font-semibold text-slate-800">Search Engine Optimization</strong> to maximize your company's digital footprint. By building robust <strong className="font-semibold text-slate-800">SEO-Friendly Website Development</strong> layouts using React, next-gen TypeScript, Node, and secure database schemas, we ensure your site is optimized to rank higher and load faster.
             </p>
 
             {/* Local Durgapur address details block inside about page */}
