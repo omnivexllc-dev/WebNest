@@ -5,9 +5,10 @@ import WebNestLogo from './WebNestLogo';
 
 interface FooterProps {
   onNavClick: (sectionId: string) => void;
+  onStaffHubToggle: () => void;
 }
 
-export default function Footer({ onNavClick }: FooterProps) {
+export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
   const [modalType, setModalType] = useState<'privacy' | 'terms' | null>(null);
 
   const quickLinks = [
@@ -128,6 +129,15 @@ export default function Footer({ onNavClick }: FooterProps) {
                   </a>
                 </li>
               ))}
+              <li className="pt-1.5 border-t border-zinc-900">
+                <button
+                  type="button"
+                  onClick={onStaffHubToggle}
+                  className="text-blue-500 hover:text-blue-400 font-bold flex items-center gap-1.5 transition-colors cursor-pointer text-left"
+                >
+                  <span>Staff Workspace 🧑‍💻</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -171,7 +181,7 @@ export default function Footer({ onNavClick }: FooterProps) {
         {/* Legal Row & Copyright Badge */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs select-none">
           <div className="text-zinc-600 text-center md:text-left leading-relaxed">
-            <span>© {new Date().getFullYear()} WebNest · All rights reserved · Built with craft in Durgapur, India</span>
+            <span>© {new Date().getFullYear()} WebNest · All rights reserved</span>
           </div>
 
           <div className="flex items-center space-x-6 text-zinc-600">

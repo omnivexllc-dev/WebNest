@@ -26,10 +26,10 @@ export default function LocalSEOSection() {
             <MapPin className="w-3.5 h-3.5" />
             <span>Local SEO & Web Authority</span>
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             Elite Web Design & SEO Services <br />
             in Durgapur & West Bengal
-          </h1>
+          </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             From the heart of steel-city Durgapur, WebNest engineers world-class responsive digital platforms. We craft highly intuitive user experiences designed specifically to dominate organic Google rankings, speed up customer conversions, and fuel enterprise growth across West Bengal.
           </p>
@@ -164,95 +164,7 @@ export default function LocalSEOSection() {
 
         </div>
 
-        {/* Exhaustive Search Index / Service Matrix for Organic Clicks */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white border border-slate-200/60 rounded-3xl p-8 shadow-sm mt-12"
-        >
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-            <div>
-              <span className="text-[10px] text-blue-600 font-extrabold tracking-widest uppercase block mb-1">
-                EXHAUSTIVE SEO SERVICE SEARCH CLUSTERS
-              </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-                Our Digital Keyword & Strategy Capabilities Index
-              </h3>
-            </div>
-            <p className="text-slate-500 text-xs max-w-sm leading-relaxed">
-              Serving local businesses and global brands from Durgapur, West Bengal with target-driven web layout execution.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-50/50 p-5 rounded-2xl border border-slate-100">
-              <h4 className="text-xs font-extrabold text-slate-800 uppercase tracking-widest mb-3 border-b border-slate-200/50 pb-2">
-                High-Intent Services
-              </h4>
-              <ul className="space-y-1.5 text-xs text-slate-600">
-                <li className="hover:text-blue-600 transition-colors">🚀 Website Design Services</li>
-                <li className="hover:text-blue-600 transition-colors">💻 Website Development Services</li>
-                <li className="hover:text-blue-600 transition-colors">🎯 Professional Web Designer</li>
-                <li className="hover:text-blue-600 transition-colors">📈 Business Website Development</li>
-                <li className="hover:text-blue-600 transition-colors">⚡ Custom Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">📱 Responsive Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">🛒 Ecommerce Website Development</li>
-                <li className="hover:text-blue-600 transition-colors">🔍 SEO Services & Local SEO Services</li>
-                <li className="hover:text-blue-600 transition-colors">⚙️ Technical SEO Services</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-50/50 p-5 rounded-2xl border border-slate-100">
-              <h4 className="text-xs font-extrabold text-slate-800 uppercase tracking-widest mb-3 border-b border-slate-200/50 pb-2">
-                Durgapur Hyperlocal
-              </h4>
-              <ul className="space-y-1.5 text-xs text-slate-600">
-                <li className="hover:text-blue-600 transition-colors">📍 Website Design Company in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Web Developer in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 SEO Company in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Best Website Designer in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Ecommerce Website Development in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Digital Marketing Agency in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Website Design Services Near Me</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-50/50 p-5 rounded-2xl border border-slate-100">
-              <h4 className="text-xs font-extrabold text-slate-800 uppercase tracking-widest mb-3 border-b border-slate-200/50 pb-2">
-                West Bengal Regions
-              </h4>
-              <ul className="space-y-1.5 text-xs text-slate-600">
-                <li className="hover:text-blue-600 transition-colors">🏢 Website Design Company in West Bengal</li>
-                <li className="hover:text-blue-600 transition-colors">🌐 Web Development Company in West Bengal</li>
-                <li className="hover:text-blue-600 transition-colors">📊 SEO Agency in West Bengal</li>
-                <li className="hover:text-blue-600 transition-colors">🏬 Website Designer in Kolkata</li>
-                <li className="hover:text-blue-600 transition-colors">👔 SEO Expert in Kolkata</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-50/50 p-5 rounded-2xl border border-slate-100">
-              <h4 className="text-xs font-extrabold text-slate-800 uppercase tracking-widest mb-3 border-b border-slate-200/50 pb-2">
-                Industry & Long-Tail
-              </h4>
-              <ul className="space-y-1.5 text-xs text-slate-600">
-                <li className="hover:text-blue-600 transition-colors">🏢 Real Estate Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">🏫 School Website Development</li>
-                <li className="hover:text-blue-600 transition-colors">🏥 Hospital Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">🍔 Restaurant Website Development</li>
-                <li className="hover:text-blue-600 transition-colors">🏪 Small Business Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">🏗️ Construction Company Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">✈️ Travel Agency Website Design</li>
-                <li className="hover:text-blue-600 transition-colors">⚙️ Website Redesign Services for Businesses</li>
-                <li className="hover:text-blue-600 transition-colors">🔑 Affordable Website Design Company in Durgapur</li>
-                <li className="hover:text-blue-600 transition-colors">🔑 SEO-Friendly Website Design Services</li>
-                <li className="hover:text-blue-600 transition-colors">🌐 Local Business Website Design Experts</li>
-                <li className="hover:text-blue-600 transition-colors">📍 Google Business Profile Keywords Optimizer</li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
 
       </div>
     </section>

@@ -6,9 +6,10 @@ import WebNestLogo from './WebNestLogo';
 interface NavbarProps {
   onNavClick: (sectionId: string) => void;
   activeSection: string;
+  onStaffHubToggle: () => void;
 }
 
-export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
+export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -96,17 +97,26 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
           ))}
         </div>
 
-        {/* Action Button */}
-        <div id="desktop-action" className="hidden lg:block">
+        {/* Action Buttons */}
+        <div id="desktop-actions" className="hidden lg:flex items-center space-x-3">
+          <button
+            onClick={onStaffHubToggle}
+            className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-extrabold rounded-full transition-all duration-200 cursor-pointer flex items-center gap-1.5 border border-slate-200 uppercase tracking-widest hover:-translate-y-0.5"
+            title="Access Shared Team Workspace & Collaborate"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Team Desk 🧑‍💻</span>
+          </button>
+
           <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
               handleLinkClick('contact');
             }}
-            className="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer inline-block"
+            className="px-6 py-2.5 bg-blue-600 text-white text-xs font-extrabold uppercase tracking-widest rounded-full shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer inline-block"
           >
-            Free Consultation
+            Consultation
           </a>
         </div>
 
@@ -148,6 +158,18 @@ export default function Navbar({ onNavClick, activeSection }: NavbarProps) {
                   {link.name}
                 </a>
               ))}
+              <button
+                type="button"
+                onClick={() => {
+                  setIsOpen(false);
+                  onStaffHubToggle();
+                }}
+                className="w-full inline-flex items-center justify-center space-x-2 bg-slate-100 text-slate-800 text-sm font-extrabold uppercase tracking-widest py-3 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-center cursor-pointer"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Team Workspace 🧑‍💻</span>
+              </button>
+
               <a
                 href="#contact"
                 onClick={(e) => {

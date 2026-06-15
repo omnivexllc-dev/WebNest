@@ -20,10 +20,10 @@ export default function FAQSection() {
             <Sparkles className="w-3 h-3 text-blue-600" />
             Clear Answers
           </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 animate-[fade-in_0.5s_ease-out]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 animate-[fade-in_0.5s_ease-out]">
             Web Design, Development & <br />
             <span className="text-blue-600">Search Strategy FAQs</span>
-          </h1>
+          </h2>
           <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
             Gain complete clarity regarding our premium engineering workflows, custom coding practices, local search ranking optimizations, and budget-friendly digital assets.
           </p>

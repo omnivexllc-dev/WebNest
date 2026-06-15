@@ -12,11 +12,13 @@ import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import ConsultationChatbot from './components/ConsultationChatbot.tsx';
 import FAQSection from './components/FAQSection.tsx';
+import StaffHub from './components/StaffHub.tsx';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
   const [preselectedService, setPreselectedService] = useState<string>('');
   const [scrollProgress, setScrollProgress] = useState<number>(0);
+  const [isStaffHubOpen, setIsStaffHubOpen] = useState<boolean>(false);
 
   // Track page scroll progress for visual feedback
   useEffect(() => {
@@ -102,7 +104,7 @@ export default function App() {
       />
 
       {/* Dynamic sticky Navigation Menu */}
-      <Navbar onNavClick={handleNavClick} activeSection={activeSection} />
+      <Navbar onNavClick={handleNavClick} activeSection={activeSection} onStaffHubToggle={() => setIsStaffHubOpen(true)} />
 
       {/* Main coordinates stack */}
       <main className="flex-1">
@@ -138,10 +140,13 @@ export default function App() {
       </main>
 
       {/* Structured footer with legal indicators */}
-      <Footer onNavClick={handleNavClick} />
+      <Footer onNavClick={handleNavClick} onStaffHubToggle={() => setIsStaffHubOpen(true)} />
 
       {/* Gemini Consultation Bot Floating Launcher */}
       <ConsultationChatbot />
+
+      {/* Shared Staff/Co-worker Workspace Operations Hub overlay */}
+      <StaffHub isOpen={isStaffHubOpen} onClose={() => setIsStaffHubOpen(false)} />
     </div>
   );
 }
