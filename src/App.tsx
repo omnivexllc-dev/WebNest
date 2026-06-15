@@ -7,6 +7,7 @@ import WhyChooseUs from './components/WhyChooseUs.tsx';
 import Process from './components/Process.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import About from './components/About.tsx';
+import LocalSEOSection from './components/LocalSEOSection.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import ConsultationChatbot from './components/ConsultationChatbot.tsx';
@@ -59,7 +60,7 @@ export default function App() {
 
   // IntersectionObserver to sync nav bar underlines dynamically on scroll
   useEffect(() => {
-    const sections = ['home', 'services', 'portfolio', 'why-webnest', 'process', 'about', 'contact'];
+    const sections = ['home', 'services', 'portfolio', 'why-webnest', 'process', 'about', 'local-hub', 'contact'];
     
     const observers = sections.map((sectionId) => {
       const el = document.getElementById(sectionId);
@@ -124,6 +125,9 @@ export default function App() {
 
         {/* Micro slider client testimonials */}
         <Testimonials />
+
+        {/* Local SEO & Web Authority Section */}
+        <LocalSEOSection />
 
         {/* Submissions form & fallback maps card */}
         <Contact preselectedService={preselectedService} />

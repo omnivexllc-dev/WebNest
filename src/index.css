@@ -16,3 +16,24 @@ html {
   outline: 2px solid var(--color-blue-600);
   outline-offset: 2px;
 }
+
+/* Hard-accelerated infinite ticker horizontal scroll */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: ticker 18s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+

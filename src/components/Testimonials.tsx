@@ -1,12 +1,27 @@
 import { useState } from 'react';
 import { TESTIMONIALS_DATA } from '../data.ts';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Quote, ShoppingBag, Building2, ShieldCheck, TrendingUp, Home, Activity, Globe, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const PARTNERS = [
+    { name: 'ApexRetail', icon: ShoppingBag, color: 'text-blue-600' },
+    { name: 'Vanguard Builders', icon: Building2, color: 'text-amber-500' },
+    { name: 'SwiftInsure', icon: ShieldCheck, color: 'text-emerald-500' },
+    { name: 'Zenith Analytics', icon: TrendingUp, color: 'text-indigo-500' },
+    { name: 'LuxeSpace Real Estate', icon: Home, color: 'text-rose-500' },
+    { name: 'CarePulse Medical', icon: Activity, color: 'text-cyan-500' },
+    { name: 'Sylvan Logistics', icon: Globe, color: 'text-sky-600' },
+    { name: 'Haldia Grid', icon: Zap, color: 'text-amber-400' },
+  ];
+
+  // Tripled to ensure seamless horizontal cycle wrap with no gaps on very wide screens
+  const tickerPartners = [...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS];
+
   const handlePrev = () => {
+
     setActiveIndex((prev) => (prev === 0 ? TESTIMONIALS_DATA.length - 1 : prev - 1));
   };
 
@@ -131,6 +146,41 @@ export default function Testimonials() {
             >
               <ChevronRight className="w-5 h-5 shrink-0" />
             </button>
+          </div>
+        </motion.div>
+
+        {/* Trusted Partners Infinite Logo Ticker */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          id="partner-ticker-section"
+          className="mt-28 border-t border-slate-100 pt-16"
+        >
+          <p className="text-center text-[10px] font-extrabold tracking-widest text-slate-400 uppercase mb-8">
+            Empowering growth for trusted industries & regional market leaders
+          </p>
+          
+          <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:bottom-0 before:w-16 before:bg-gradient-to-r before:from-white before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-16 after:bg-gradient-to-l after:from-white after:to-transparent after:z-10 py-1">
+            <div className="animate-infinite-scroll flex gap-10 items-center">
+              {tickerPartners.map((partner, index) => {
+                const IconComponent = partner.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-3 bg-slate-50 border border-slate-100 px-5 py-3 rounded-2xl hover:bg-white hover:border-slate-200 hover:shadow-md hover:shadow-slate-100/60 transition-all duration-300 group shrink-0 select-none cursor-pointer"
+                  >
+                    <div className="p-1.5 rounded-xl bg-white border border-slate-200/50 shadow-sm transition-colors duration-300 group-hover:bg-slate-50">
+                      <IconComponent className={`w-4 h-4 ${partner.color} transition-transform duration-300 group-hover:scale-110`} />
+                    </div>
+                    <span className="text-xs font-bold text-slate-700 tracking-tight transition-colors duration-300 group-hover:text-slate-950">
+                      {partner.name}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </motion.div>
       </div>
