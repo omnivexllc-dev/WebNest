@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Twitter, Linkedin, Github, Instagram, Scale } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Twitter, Linkedin, Github, Instagram, Scale, ArrowUpRight, Sparkles, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import WebNestLogo from './WebNestLogo';
 
@@ -13,96 +13,128 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
 
   const quickLinks = [
     { name: 'About Us', id: 'about' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'Our Process', id: 'process' },
-    { name: 'Why WebNest', id: 'why-webnest' },
-    { name: 'Contact Form', id: 'contact' }
+    { name: 'Our Work Portfolio', id: 'portfolio' },
+    { name: 'How We Work', id: 'process' },
+    { name: 'Client Benefits & Choices', id: 'why-webnest' },
+    { name: 'Get In Touch', id: 'contact' }
   ];
 
   const coreServices = [
-    { name: 'Website Design', id: 'services' },
-    { name: 'Web Development', id: 'services' },
-    { name: 'E-Commerce', id: 'services' },
-    { name: 'SEO Services', id: 'services' },
-    { name: 'UI/UX Design', id: 'services' },
-    { name: 'AI Automation', id: 'services' }
+    { name: 'Bespoke UI/UX Design', id: 'services' },
+    { name: 'Custom React Web Apps', id: 'services' },
+    { name: 'Headless E-Commerce', id: 'services' },
+    { name: 'Organic Search Mastery (SEO)', id: 'services' },
+    { name: 'Rigorous Performance Tuning', id: 'services' },
+    { name: 'Dynamic API Engineering', id: 'services' }
   ];
 
   return (
-    <footer id="main-footer" className="bg-[#09090b] text-zinc-500 py-16 px-6 sm:px-8 border-t border-[#18181b] relative overflow-hidden font-sans">
-      {/* Background ambient lighting */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-0 left-12 w-64 h-64 bg-blue-500/[0.02] blur-3xl rounded-full pointer-events-none" />
+    <footer id="main-footer" className="bg-[#030303] text-zinc-400 py-20 px-6 sm:px-8 lg:px-12 border-t border-zinc-800/40 relative overflow-hidden font-sans">
+      
+      {/* Premium Cyber Ambient Orbs */}
+      <div className="absolute top-0 right-1/4 w-[600px] h-[300px] bg-gradient-to-b from-blue-600/10 to-transparent blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/[0.03] blur-[150px] rounded-full pointer-events-none" />
+      
+      {/* Decorative premium thin coordinate grid line */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00f0ff]/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Main Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-12 border-b border-[#18181b]">
-          
-          {/* Column 1: Brand & Bio */}
-          <div className="lg:col-span-5 space-y-6">
+        {/* Upper Brand Alignment & Elite Badge Call */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 mb-12 border-b border-zinc-800/50 items-center">
+          <div className="lg:col-span-6 flex items-center space-x-3">
             <div 
-              className="inline-flex items-center space-x-2 cursor-pointer group" 
+              className="inline-flex items-center space-x-3 cursor-pointer group" 
               onClick={() => onNavClick('home')}
             >
-              <div className="w-11 h-11 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
-                <WebNestLogo className="w-11 h-11" isDark={true} />
+              <div className="w-12 h-12 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-500">
+                <WebNestLogo className="w-12 h-12" isDark={true} />
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-white tracking-tight block leading-none">
-                  Web<span className="text-[#005eff]">Nest</span>
+                <span className="text-2xl font-black text-white tracking-tight block leading-none">
+                  Web<span className="bg-gradient-to-r from-[#00f0ff] to-[#005eff] bg-clip-text text-transparent">Nest</span>
                 </span>
-                <span className="text-[9px] font-extrabold tracking-widest text-[#71717a] block uppercase mt-0.5">
-                  Digital Studio
+                <span className="text-[10px] font-black tracking-[0.25em] text-zinc-500 block uppercase mt-1">
+                  Digital Engineering Studio
                 </span>
               </div>
-            </div>
-
-            <p className="text-sm text-[#52525b] leading-relaxed max-w-sm">
-              Premium web design and digital solutions. Building conversion-oriented, blazing fast business platforms from Durgapur, West Bengal — serving clients globally.
-            </p>
-
-            {/* Premium Social Media Icons Deck */}
-            <div className="flex items-center gap-2 pt-2">
-              {[
-                { icon: Twitter, url: 'https://twitter.com' },
-                { icon: Linkedin, url: 'https://linkedin.com' },
-                { icon: Github, url: 'https://github.com' },
-                { icon: Instagram, url: 'https://instagram.com' }
-              ].map((soc, idx) => {
-                const SocIcon = soc.icon;
-                return (
-                  <a
-                    key={idx}
-                    href={soc.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-9 h-9 rounded-lg bg-[#18181b] border border-[#27272a] text-[#71717a] hover:bg-[#27272a] hover:text-[#a1a1aa] flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-                  >
-                    <SocIcon className="w-4 h-4" />
-                  </a>
-                );
-              })}
             </div>
           </div>
 
-          {/* Column 2: Core Capabilities */}
-          <div className="lg:col-span-2.5 space-y-5">
-            <h4 className="text-xs font-bold text-[#71717a] uppercase tracking-widest">
-              Services
+          <div className="lg:col-span-6 flex flex-wrap lg:justify-end gap-3">
+            <div className="flex items-center space-x-2 px-4 py-2 bg-zinc-900/60 border border-zinc-800/80 rounded-full text-xs font-semibold text-zinc-300">
+              <Sparkles className="w-3.5 h-3.5 text-[#00f0ff] animate-pulse" />
+              <span>Sub-Second Render Guarantee</span>
+            </div>
+            <div className="flex items-center space-x-2 px-4 py-2 bg-zinc-900/60 border border-zinc-800/80 rounded-full text-xs font-semibold text-zinc-300">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+              <span>SOC2 Quality Frameworks</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Main Information Architecture Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-zinc-800/50">
+          
+          {/* Column 1: Studio Bio & Social Manifest */}
+          <div className="lg:col-span-5 space-y-6">
+            <h4 className="text-sm font-bold text-zinc-200 uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              Our Mission
             </h4>
-            <ul className="space-y-3.5 text-sm">
+            <p className="text-sm text-zinc-400 leading-relaxed max-w-sm">
+              We engineer beautiful, high-performance web products that transform commercial visibility. By pairing custom React systems and technical SEO, we build lasting digital assets tailored to global corporate standards.
+            </p>
+
+            {/* Glassmorphic Cybernetic Social Hub */}
+            <div className="space-y-3">
+              <span className="text-[10px] font-bold tracking-widest text-zinc-500 uppercase block">Connect Network</span>
+              <div className="flex items-center gap-2.5">
+                {[
+                  { icon: Twitter, url: 'https://twitter.com' },
+                  { icon: Linkedin, url: 'https://linkedin.com' },
+                  { icon: Github, url: 'https://github.com' },
+                  { icon: Instagram, url: 'https://instagram.com' }
+                ].map((soc, idx) => {
+                  const SocIcon = soc.icon;
+                  return (
+                    <a
+                      key={idx}
+                      href={soc.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-10 h-10 rounded-xl bg-zinc-900/30 border border-zinc-800/60 text-zinc-400 hover:border-blue-500/40 hover:bg-zinc-900/80 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+                    >
+                      <SocIcon className="w-4 h-4" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2: Capabilities Core Services */}
+          <div className="lg:col-span-2.5 space-y-5">
+            <h4 className="text-sm font-bold text-zinc-200 uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              Expertise
+            </h4>
+            <ul className="space-y-4 text-sm">
               {coreServices.map((srv, index) => (
-                <li key={index}>
+                <li key={index} className="group">
                   <a
                     href={`#${srv.id}`}
                     onClick={(e) => {
                       e.preventDefault();
                       onNavClick(srv.id);
                     }}
-                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors text-left font-medium block"
+                    className="text-zinc-500 hover:text-zinc-100 flex items-center gap-1.5 cursor-pointer transition-colors text-left font-medium"
                   >
-                    {srv.name}
+                    <motion.span 
+                      className="w-1 h-1 bg-transparent group-hover:bg-[#00f0ff] rounded-full transition-colors" 
+                      layout
+                    />
+                    <span>{srv.name}</span>
                   </a>
                 </li>
               ))}
@@ -111,83 +143,108 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
 
           {/* Column 3: Corporate Directory */}
           <div className="lg:col-span-2 space-y-5">
-            <h4 className="text-xs font-bold text-[#71717a] uppercase tracking-widest">
-              Company
+            <h4 className="text-sm font-bold text-zinc-200 uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00f0ff]" />
+              Directory
             </h4>
-            <ul className="space-y-3.5 text-sm">
+            <ul className="space-y-4 text-sm">
               {quickLinks.map((link, index) => (
-                <li key={index}>
+                <li key={index} className="group">
                   <a
                     href={`#${link.id}`}
                     onClick={(e) => {
                       e.preventDefault();
                       onNavClick(link.id);
                     }}
-                    className="text-[#52525b] hover:text-[#a1a1aa] flex items-center cursor-pointer transition-colors font-medium block"
+                    className="text-zinc-500 hover:text-zinc-100 flex items-center gap-1.5 cursor-pointer transition-colors font-medium"
                   >
-                    {link.name}
+                    <motion.span 
+                      className="w-1 h-1 bg-transparent group-hover:bg-[#00f0ff] rounded-full transition-colors" 
+                      layout
+                    />
+                    <span>{link.name}</span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Local Contact Info */}
+          {/* Column 4: Local Contact Portal cards */}
           <div className="lg:col-span-2.5 space-y-5">
-            <h4 className="text-xs font-bold text-[#71717a] uppercase tracking-widest">
-              Contact
+            <h4 className="text-sm font-bold text-zinc-200 uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+              Contacts
             </h4>
-            <ul className="space-y-4 text-sm">
-              <li>
-                <a 
-                  href="tel:+917908774055" 
-                  className="text-[#52525b] hover:text-[#a1a1aa] flex items-center gap-2.5 transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-[#71717a] shrink-0" />
-                  <span>+91 79087 74055</span>
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="mailto:webnestsupport@gmail.com" 
-                  className="text-[#52525b] hover:text-[#a1a1aa] flex items-center gap-2.5 transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-[#71717a] shrink-0" />
-                  <span>webnestsupport@gmail.com</span>
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5 text-[#52525b]">
-                <MapPin className="w-4 h-4 text-[#71717a] shrink-0 mt-0.5" />
-                <span className="leading-snug">Durgapur, West Bengal 713205</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-[#52525b]">
-                <Clock className="w-4 h-4 text-[#71717a] shrink-0 mt-0.5" />
-                <span>Mon–Sat · 9AM–7PM</span>
-              </li>
-            </ul>
+            <div className="space-y-3">
+              {/* Premium Phone Block */}
+              <a 
+                href="tel:+917908774055" 
+                className="group p-3 rounded-xl bg-zinc-900/40 border border-zinc-950 hover:border-zinc-800 hover:bg-zinc-900/60 block transition-all"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-zinc-800/50 flex items-center justify-center text-zinc-400 group-hover:text-white transition-colors">
+                    <Phone className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase block tracking-wider">Voice Hotline</span>
+                    <span className="text-xs text-zinc-300 font-semibold group-hover:text-blue-400 transition-colors">+91 79087 74055</span>
+                  </div>
+                </div>
+              </a>
+
+              {/* Premium Mail Block */}
+              <a 
+                href="mailto:webnestsupport@gmail.com" 
+                className="group p-3 rounded-xl bg-zinc-900/40 border border-zinc-950 hover:border-zinc-800 hover:bg-zinc-900/60 block transition-all"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-zinc-800/50 flex items-center justify-center text-zinc-400 group-hover:text-white transition-colors">
+                    <Mail className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase block tracking-wider">Technical Helpdesk</span>
+                    <span className="text-xs text-zinc-300 font-semibold group-hover:text-blue-400 transition-colors">webnestsupport@gmail.com</span>
+                  </div>
+                </div>
+              </a>
+
+              {/* Premium Location / Hours Tag */}
+              <div className="text-[11px] text-zinc-500 px-1 space-y-1.5">
+                <div className="flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-zinc-600" />
+                  <span>Durgapur, West Bengal, India</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-zinc-600" />
+                  <span>Mon–Sat · 9:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
 
-        {/* Legal Row & Copyright Badge */}
+        {/* Lower Legal Deck & Core Attribution */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs select-none">
-          <div className="text-zinc-600 text-center md:text-left leading-relaxed">
-            <span>© {new Date().getFullYear()} WebNest · All rights reserved</span>
+          <div className="text-zinc-500 text-center md:text-left leading-relaxed">
+            <span>© {new Date().getFullYear()} WebNest Digital. Custom crafted for enterprise acceleration. All rights reserved.</span>
           </div>
 
-          <div className="flex items-center space-x-6 text-zinc-600">
+          <div className="flex items-center space-x-6 text-zinc-500">
             <button
               onClick={() => setModalType('privacy')}
-              className="hover:text-zinc-400 cursor-pointer transition-all"
+              className="hover:text-zinc-100 cursor-pointer transition-all flex items-center gap-1"
             >
-              Privacy Policy
+              <span>Privacy Regulations</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
             </button>
-            <div className="w-1 h-1 bg-[#18181b] rounded-full" />
+            <div className="w-1 h-1 bg-zinc-800 rounded-full" />
             <button
               onClick={() => setModalType('terms')}
-              className="hover:text-zinc-400 cursor-pointer transition-all"
+              className="hover:text-zinc-100 cursor-pointer transition-all flex items-center gap-1"
             >
-              Terms of Service
+              <span>Terms of Engagement</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
             </button>
           </div>
         </div>
@@ -201,13 +258,13 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className="bg-[#0c0c0e] text-zinc-400 rounded-2xl max-w-xl w-full border border-zinc-800 shadow-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+              className="bg-[#0b0b0d] text-zinc-400 rounded-2xl max-w-xl w-full border border-zinc-800 shadow-2xl p-8 relative max-h-[85vh] overflow-y-auto"
             >
               <button
                 onClick={() => setModalType(null)}
@@ -222,8 +279,8 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
               </div>
 
               {modalType === 'privacy' ? (
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-white">Privacy Policy</h3>
+                <div className="space-y-4 font-sans">
+                  <h3 className="text-xl font-bold text-white tracking-tight">Privacy Policy</h3>
                   <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                     At WebNest, we prioritize the secure handling and preservation of our client data. This Privacy Policy documents how we gather, process, and protect client lead details.
                   </p>
@@ -235,8 +292,8 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
                   </p>
                 </div>
               ) : (
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-white">Terms & Conditions</h3>
+                <div className="space-y-4 font-sans">
+                  <h3 className="text-xl font-bold text-white tracking-tight">Terms & Conditions</h3>
                   <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                     Welcome to the digital properties of WebNest digital engineering studio. These Terms state the compliance guidelines governing website browsing.
                   </p>
