@@ -4,18 +4,18 @@ import { motion } from 'motion/react';
 export default function About() {
   const coreValues = [
     {
-      title: 'Innovative Technology Solutions',
-      description: 'We embrace high-density APIs, streaming large language models, secure cloud storage, and cutting edge design frameworks.',
+      title: 'Innovative Technical Stack',
+      description: 'We deploy robust component structures, highly optimized API layers, secure cloud data storage, and modern visual frameworks to build blazing-fast interfaces.',
       icon: Award
     },
     {
-      title: 'Security-First Architecture',
-      description: 'Our software engineers follow rigorous secure-shell protocols, connection pool parameters, and continuous cloud back-ups.',
+      title: 'Enterprise-Grade Reliability',
+      description: 'We build with a steadfast commitment to secure data pipelines, proper security protocols, and robust client redundancy systems to safeguard your assets.',
       icon: Shield
     },
     {
-      title: 'Highly Certified Architects',
-      description: 'Our creative visual designers and full-stack engineers come armed with years of enterprise grade digital craftsmanship.',
+      title: 'Bespoke Digital Craftsmanship',
+      description: 'Our senior visual designers and full-stack engineers work collaboratively to turn complex product requirements into beautiful, elegant, and modern digital assets.',
       icon: Users
     }
   ];
@@ -39,18 +39,18 @@ export default function About() {
             className="lg:col-span-6 space-y-6"
           >
             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-2">
-              About WebNest
+              Our Agency
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Empowering Businesses Through Innovative Design & Tech
+              Empowering Global Brands with Precision Engineering
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              As a leading <strong className="font-semibold text-slate-900">Website Design Company in Durgapur</strong>, WebNest is the premier destination for high-profile <strong className="font-semibold text-slate-900">Website Design</strong>, next-gen <strong className="font-semibold text-slate-900">Web Development Services in Durgapur</strong>, and organic <strong className="font-semibold text-slate-900">SEO Services in Durgapur</strong>. Whether you are actively seeking a top-tier <strong className="font-semibold text-slate-900">Website Designer Near Me</strong>, custom <strong className="font-semibold text-slate-900">Ecommerce Website Development</strong>, or an <strong className="font-semibold text-slate-900">Affordable Website Design Company</strong> with deep regional expertise, our certified software engineers configure high authority projects built to scale.
+              WebNest is a premier web design and software engineering studio. We bridge the gap between creative visual artistry and rigorous systems engineering, building custom interfaces curated directly to our clients' commercial goals. Our engineering team focuses on building custom systems designed to represent your brand with utmost distinction, rank prominently on search engines, and convert visitors into long-term commercial relationships.
             </p>
 
             <p className="text-slate-600 text-sm leading-relaxed">
-              We specialize in custom <strong className="font-semibold text-slate-800">Business Website Creation</strong>, high-performance <strong className="font-semibold text-slate-800">Responsive Website Design</strong>, full-scale <strong className="font-semibold text-slate-800">Ecommerce Development</strong>, <strong className="font-semibold text-slate-800">Digital Marketing</strong>, and <strong className="font-semibold text-slate-800">Search Engine Optimization</strong> to maximize your company's digital footprint. By building robust <strong className="font-semibold text-slate-800">SEO-Friendly Website Development</strong> layouts using React, next-gen TypeScript, Node, and secure database schemas, we ensure your site is optimized to rank higher and load faster.
+              We specialize in custom enterprise website development, high-performance responsive web applications, secure e-commerce portals, and strategic search engine optimization. By leveraging React, next-gen TypeScript, solid Node.js backends, and beautiful performance practices, we ensure your platform maintains superior Core Web Vitals—loading instantly, scaling effortlessly, and engaging users across all screen sizes.
             </p>
 
             {/* Local Durgapur address details block inside about page */}
@@ -59,7 +59,7 @@ export default function About() {
                 <MapPin className="w-5.5 h-5.5" />
               </div>
               <div>
-                <span className="text-xs font-bold text-slate-400 block uppercase tracking-widest">Office Location</span>
+                <span className="text-xs font-bold text-slate-400 block uppercase tracking-widest animate-pulse">Design Studio</span>
                 <span className="text-xs font-semibold text-slate-800 leading-normal block mt-0.5">
                   2/32 Bankim Chandra Avenue, B-Zone, Durgapur, West Bengal 713205, India
                 </span>
