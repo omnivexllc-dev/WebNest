@@ -36,3 +36,77 @@ html {
   animation-play-state: paused;
 }
 
+/* Premium 3D Style System & Layering */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* 3D Glassmorphism Card with deep dimensional shadow mapping */
+.shadow-3d-card {
+  box-shadow: 
+    0 10px 30px -10px rgba(15, 23, 42, 0.08),
+    0 1px 1px rgba(15, 23, 42, 0.03),
+    0 30px 60px -15px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-3d-glow {
+  box-shadow: 
+    0 20px 40px -15px rgba(37, 99, 235, 0.25),
+    0 1px 3px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Volumetric 3D Grid Blueprint Blueprint Overlay */
+.bg-3d-blueprint {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+}
+
+/* Realistic 3D Bobbing Float Animations */
+@keyframes floatY3D {
+  0% {
+    transform: translateY(0px) rotateX(4deg) rotateY(-5deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotateX(6deg) rotateY(-2deg) rotateZ(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotateX(4deg) rotateY(-5deg) rotateZ(0deg);
+  }
+}
+
+@keyframes floatBounce3D {
+  0% {
+    transform: translateY(0px) rotateX(10deg) rotateY(15deg) rotateZ(-3deg);
+  }
+  50% {
+    transform: translateY(-18px) rotateX(12deg) rotateY(18deg) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(0px) rotateX(10deg) rotateY(15deg) rotateZ(-3deg);
+  }
+}
+
+.animate-3d-float {
+  animation: floatY3D 6s ease-in-out infinite;
+}
+
+.animate-3d-isometric-float {
+  animation: floatBounce3D 8s ease-in-out infinite;
+}
+

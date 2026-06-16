@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Sparkles, Smartphone, Compass, Zap, LifeBuoy, DollarSign, LucideIcon, ShieldCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import { WHY_CHOOSE_US_DATA } from '../data.ts';
+import ThreeDCard from './ThreeDCard';
 
 interface AnimatedCounterProps {
   value: number;
@@ -85,7 +86,7 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section id="why-webnest" className="py-24 bg-white relative overflow-hidden">
+    <section id="why-webnest" className="py-24 bg-white relative overflow-hidden bg-3d-blueprint">
       {/* Decorative blurred backdrops */}
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-100/10 blur-3xl rounded-full pointer-events-none translate-x-1/2" />
       <div className="absolute bottom-0 left-10 w-72 h-72 bg-slate-50 blur-3xl rounded-full pointer-events-none" />
@@ -126,33 +127,41 @@ export default function WhyChooseUs() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group relative bg-white border border-slate-200/60 p-8 rounded-2xl hover:border-blue-600 hover:shadow-xl hover:shadow-blue-200/30 transition-all duration-300 shadow-sm"
+                className="perspective-1000 h-full"
               >
-                {/* Visual Accent Corner Bar */}
-                <div className="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-blue-600 transition-all duration-300 rounded-l-2xl" />
+                <ThreeDCard 
+                  className="group relative h-full bg-white border border-slate-200/60 p-8 rounded-3xl hover:border-blue-600 transition-all duration-300 shadow-sm"
+                  intensity={8}
+                >
+                  {/* Visual Accent Corner Bar */}
+                  <div className="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-blue-600 transition-all duration-300 rounded-l-2xl" />
 
-                {/* Icon wrapper */}
-                <div className="w-11 h-11 bg-slate-50 text-slate-800 group-hover:bg-blue-50 group-hover:text-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 mb-6 shrink-0 shadow-sm border border-slate-100">
-                  <IconComponent className="w-5.5 h-5.5" />
-                </div>
+                  {/* Icon wrapper */}
+                  <div className="w-11 h-11 bg-slate-50 text-slate-800 group-hover:bg-blue-50 group-hover:text-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 mb-6 shrink-0 shadow-sm border border-slate-100">
+                    <IconComponent className="w-5.5 h-5.5" />
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-all duration-300">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-all duration-300">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  {item.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
 
-                {/* Additional tag just to elevate content density */}
-                <div className="mt-5 flex items-center space-x-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
-                    Certified Delivery
-                  </span>
-                </div>
+                  {/* Additional tag just to elevate content density */}
+                  <div 
+                    className="mt-5 flex items-center space-x-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ transform: 'translateZ(10px)' }}
+                  >
+                    <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                      Certified Delivery
+                    </span>
+                  </div>
+                </ThreeDCard>
               </motion.div>
             );
           })}
@@ -165,33 +174,37 @@ export default function WhyChooseUs() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, type: 'spring', damping: 20 }}
           id="stats-banner"
-          className="mt-20 border border-slate-100 rounded-3xl bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden"
+          className="mt-20 border border-slate-100 rounded-3xl bg-slate-950 text-white p-8 md:p-12 relative overflow-hidden shadow-3d-glow"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:32px_32px] opacity-10" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:32px_32px] opacity-15" />
+          
+          {/* Subtle Ambient light behind dashboard */}
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-20 bg-blue-600/25 blur-3xl rounded-full pointer-events-none" />
+
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <span className="text-4xl md:text-5xl font-extrabold text-white block">
+            <div className="group/stat transition-transform duration-300 hover:scale-105">
+              <span className="text-4xl md:text-5xl font-black text-white block tracking-tight">
                 <AnimatedCounter value={150} suffix="+" />
               </span>
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mt-2">Projects Completed</span>
+              <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Projects Completed</span>
             </div>
-            <div>
-              <span className="text-4xl md:text-5xl font-extrabold text-blue-400 block">
+            <div className="group/stat transition-transform duration-300 hover:scale-105">
+              <span className="text-4xl md:text-5xl font-black text-blue-400 block tracking-tight">
                 <AnimatedCounter value={145} suffix="+" />
               </span>
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mt-2">Happy Clients</span>
+              <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Happy Clients</span>
             </div>
-            <div>
-              <span className="text-4xl md:text-5xl font-extrabold text-white block">
+            <div className="group/stat transition-transform duration-300 hover:scale-105">
+              <span className="text-4xl md:text-5xl font-black text-white block tracking-tight">
                 <AnimatedCounter value={5} suffix="+ Yrs" />
               </span>
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mt-2">Years Experience</span>
+              <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Years Experience</span>
             </div>
-            <div>
-              <span className="text-4xl md:text-5xl font-extrabold text-blue-400 block">
+            <div className="group/stat transition-transform duration-300 hover:scale-105">
+              <span className="text-4xl md:text-5xl font-black text-blue-400 block tracking-tight">
                 <AnimatedCounter value={99.2} suffix="%" decimals={1} />
               </span>
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mt-2">Satisfaction Rate</span>
+              <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Satisfaction Rate</span>
             </div>
           </div>
         </motion.div>
