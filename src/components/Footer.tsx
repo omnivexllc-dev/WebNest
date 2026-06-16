@@ -129,15 +129,6 @@ export default function Footer({ onNavClick, onStaffHubToggle }: FooterProps) {
                   </a>
                 </li>
               ))}
-              <li className="pt-1.5 border-t border-zinc-900">
-                <button
-                  type="button"
-                  onClick={onStaffHubToggle}
-                  className="text-blue-500 hover:text-blue-400 font-bold flex items-center gap-1.5 transition-colors cursor-pointer text-left"
-                >
-                  <span>Staff Workspace 🧑‍💻</span>
-                </button>
-              </li>
             </ul>
           </div>
 

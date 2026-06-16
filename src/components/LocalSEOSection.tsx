@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ChevronDown, HelpCircle, CheckCircle, Smartphone, Globe, Share2 } from 'lucide-react';
 import { SEO_LOCAL_FAQS, SEO_SERVICE_AREAS } from '../data/textContent.ts';
-import SERPPreviewer from './SERPPreviewer';
 
 export default function LocalSEOSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -164,17 +163,6 @@ export default function LocalSEOSection() {
           </motion.div>
 
         </div>
-
-        {/* Real-time Interactive SEO Suite */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-4"
-        >
-          <SERPPreviewer />
-        </motion.div>
 
       </div>
     </section>

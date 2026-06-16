@@ -99,15 +99,6 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
 
         {/* Action Buttons */}
         <div id="desktop-actions" className="hidden lg:flex items-center space-x-3">
-          <button
-            onClick={onStaffHubToggle}
-            className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-extrabold rounded-full transition-all duration-200 cursor-pointer flex items-center gap-1.5 border border-slate-200 uppercase tracking-widest hover:-translate-y-0.5"
-            title="Access Shared Team Workspace & Collaborate"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Team Desk 🧑‍💻</span>
-          </button>
-
           <a
             href="#contact"
             onClick={(e) => {
@@ -158,17 +149,6 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
                   {link.name}
                 </a>
               ))}
-              <button
-                type="button"
-                onClick={() => {
-                  setIsOpen(false);
-                  onStaffHubToggle();
-                }}
-                className="w-full inline-flex items-center justify-center space-x-2 bg-slate-100 text-slate-800 text-sm font-extrabold uppercase tracking-widest py-3 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-center cursor-pointer"
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Team Workspace 🧑‍💻</span>
-              </button>
 
               <a
                 href="#contact"
