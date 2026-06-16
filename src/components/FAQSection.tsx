@@ -82,7 +82,7 @@ export default function FAQSection() {
         {/* Callout box detailing direct communication */}
         <div className="bg-blue-50/50 rounded-2xl border border-blue-100 p-6 mt-12 text-center">
           <p className="text-slate-600 text-xs leading-relaxed">
-            Have a specific business inquiry or need professional web designers to conceptualize a project? Our local Durgapur consulting desk is online. Speak to us at <strong className="text-blue-600">webnestsupport@gmail.com</strong> or launch the interactive <strong className="text-slate-800">NestBot Assistant</strong> floating on your screen for immediate guidance.
+            Have a specific business inquiry or need professional web designers to conceptualize a project? Our local Durgapur consulting desk is online. Speak to us at <strong className="text-blue-600">webnestsupport@gmail.com</strong> or launch the interactive <strong className="text-slate-800">WebNest Assistant</strong> floating on your screen for immediate guidance.
           </p>
         </div>
 

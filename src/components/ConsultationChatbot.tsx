@@ -10,7 +10,7 @@ export default function ConsultationChatbot() {
     {
       id: 'init-message',
       role: 'model',
-      text: 'Hi! I am NestBot, your WebNest smart design consultant. 🚀\n\nI can answer questions about our services, explain our development process, or help you brainstorm an estimated budget for your new project. What are you building today?',
+      text: 'Hi! I am WebNest, your smart design and development consultant. 🚀\n\nI can answer questions about our services, explain our development process, or help you brainstorm an estimated budget for your new project. What are you building today?',
       createdAt: new Date().toISOString()
     }
   ]);
@@ -21,7 +21,7 @@ export default function ConsultationChatbot() {
 
   // Trigger proactive engagement prompt after 7 seconds if the chat hasn't been opened
   useEffect(() => {
-    const dismissed = sessionStorage.getItem('nestbot-proactive-dismissed') === 'true';
+    const dismissed = sessionStorage.getItem('webnest-proactive-dismissed') === 'true';
     if (dismissed || isOpen) return;
 
     const timer = setTimeout(() => {
@@ -152,7 +152,7 @@ export default function ConsultationChatbot() {
                   <Bot className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block leading-none">NestBot Smart Guide</span>
+                  <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block leading-none">WebNest Smart Guide</span>
                   <span className="text-xs font-bold text-slate-900 block mt-0.5">Need some guidance? 👋</span>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function ConsultationChatbot() {
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowProactive(false);
-                  sessionStorage.setItem('nestbot-proactive-dismissed', 'true');
+                  sessionStorage.setItem('webnest-proactive-dismissed', 'true');
                 }}
                 className="text-slate-400 hover:text-slate-600 p-1 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
               >
@@ -180,11 +180,11 @@ export default function ConsultationChatbot() {
                 onClick={() => {
                   setIsOpen(true);
                   setShowProactive(false);
-                  sessionStorage.setItem('nestbot-proactive-dismissed', 'true');
+                  sessionStorage.setItem('webnest-proactive-dismissed', 'true');
                 }}
                 className="inline-flex items-center space-x-1.5 bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer shadow-md shadow-blue-100"
               >
-                <span>Ask NestBot</span>
+                <span>Ask WebNest</span>
                 <ChevronRight className="w-3" />
               </button>
             </div>
@@ -198,7 +198,7 @@ export default function ConsultationChatbot() {
           onClick={() => {
             setIsOpen(!isOpen);
             setShowProactive(false);
-            sessionStorage.setItem('nestbot-proactive-dismissed', 'true');
+            sessionStorage.setItem('webnest-proactive-dismissed', 'true');
           }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
@@ -238,7 +238,7 @@ export default function ConsultationChatbot() {
                   <Bot className="w-5 h-5 shrink-0" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold block leading-none">NestBot</h4>
+                  <h4 className="text-sm font-bold block leading-none">WebNest</h4>
                   <div className="flex items-center space-x-1.5 mt-0.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">AI Consultant</span>
