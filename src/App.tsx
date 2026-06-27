@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Services from './components/Services.tsx';
@@ -147,6 +148,9 @@ export default function App() {
 
       {/* Shared Staff/Co-worker Workspace Operations Hub overlay */}
       <StaffHub isOpen={isStaffHubOpen} onClose={() => setIsStaffHubOpen(false)} />
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
