@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
   return (
     <section id="why-webnest" className="py-24 bg-white relative overflow-hidden bg-3d-blueprint">
       {/* Decorative blurred backdrops */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-100/10 blur-3xl rounded-full pointer-events-none translate-x-1/2" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-emerald-100/10 blur-3xl rounded-full pointer-events-none translate-x-1/2" />
       <div className="absolute bottom-0 left-10 w-72 h-72 bg-slate-50 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
           id="why-header"
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+          <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             The WebNest Difference
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -130,19 +130,19 @@ export default function WhyChooseUs() {
                 className="perspective-1000 h-full"
               >
                 <ThreeDCard 
-                  className="group relative h-full bg-white border border-slate-200/60 p-8 rounded-3xl hover:border-blue-600 transition-all duration-300 shadow-sm"
+                  className="group relative h-full bg-white border border-slate-200/60 p-8 rounded-3xl hover:border-emerald-600 transition-all duration-300 shadow-sm"
                   intensity={8}
                 >
                   {/* Visual Accent Corner Bar */}
-                  <div className="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-blue-600 transition-all duration-300 rounded-l-2xl" />
+                  <div className="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-emerald-600 transition-all duration-300 rounded-l-2xl" />
 
                   {/* Icon wrapper */}
-                  <div className="w-11 h-11 bg-slate-50 text-slate-800 group-hover:bg-blue-50 group-hover:text-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 mb-6 shrink-0 shadow-sm border border-slate-100">
+                  <div className="w-11 h-11 bg-slate-50 text-slate-800 group-hover:bg-emerald-50 group-hover:text-emerald-600 rounded-xl flex items-center justify-center transition-all duration-300 mb-6 shrink-0 shadow-sm border border-slate-100">
                     <IconComponent className="w-5.5 h-5.5" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-emerald-600 transition-all duration-300">
                     {item.title}
                   </h3>
 
@@ -179,7 +179,7 @@ export default function WhyChooseUs() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:32px_32px] opacity-15" />
           
           {/* Subtle Ambient light behind dashboard */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-20 bg-blue-600/25 blur-3xl rounded-full pointer-events-none" />
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-20 bg-emerald-600/25 blur-3xl rounded-full pointer-events-none" />
 
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group/stat transition-transform duration-300 hover:scale-105">
@@ -189,7 +189,7 @@ export default function WhyChooseUs() {
               <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Projects Completed</span>
             </div>
             <div className="group/stat transition-transform duration-300 hover:scale-105">
-              <span className="text-4xl md:text-5xl font-black text-blue-400 block tracking-tight">
+              <span className="text-4xl md:text-5xl font-black text-emerald-400 block tracking-tight">
                 <AnimatedCounter value={145} suffix="+" />
               </span>
               <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Happy Clients</span>
@@ -201,7 +201,7 @@ export default function WhyChooseUs() {
               <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Years Experience</span>
             </div>
             <div className="group/stat transition-transform duration-300 hover:scale-105">
-              <span className="text-4xl md:text-5xl font-black text-blue-400 block tracking-tight">
+              <span className="text-4xl md:text-5xl font-black text-emerald-400 block tracking-tight">
                 <AnimatedCounter value={99.2} suffix="%" decimals={1} />
               </span>
               <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block mt-2">Satisfaction Rate</span>

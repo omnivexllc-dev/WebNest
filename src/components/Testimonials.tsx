@@ -86,7 +86,7 @@ export default function Testimonials() {
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl mx-auto overflow-hidden border-2 border-white shadow-lg relative z-10 select-none">
                   <img
                     src={current.avatar}
-                    alt={current.name}
+                    alt={`WebNest Client Testimonial - ${current.name}, ${current.role} at ${current.company}`}
                     width="128"
                     height="128"
                     loading="lazy"

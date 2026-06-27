@@ -3,43 +3,43 @@ import { ServiceItem, PortfolioItem, TestimonialItem, ProcessStep } from './type
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'web-design',
-    title: 'Website Design',
-    description: 'Bespoke UI/UX design crafted to reflect your unique brand identity, engage visitors, and optimize conversion pathways.',
+    title: 'Website Designer',
+    description: 'Work with a premier Website Designer to craft beautiful custom layouts, interactive UI/UX wireframes, and conversion-oriented responsive visual designs.',
     iconName: 'Palette',
     benefits: ['Responsive layouts', 'Interactive prototypes', 'High-fidelity wireframes', 'Custom design systems']
   },
   {
     id: 'web-dev',
-    title: 'Website Development',
-    description: 'Robust, fast-loading, and secure websites developed using modern technologies (React, Next.js, Node.js, and TypeScript).',
+    title: 'Web Development Services',
+    description: 'Get professional Web Development Services from our leading Website Development Company, building blazing-fast, secure, and responsive web applications.',
     iconName: 'CodeXml',
     benefits: ['Clean & modular code', 'Performance optimized', 'High-end security standards', 'Scalable architecture']
   },
   {
     id: 'e-commerce',
-    title: 'E-Commerce Development',
-    description: 'Fully integrated online stores that provide smooth checkout flows, secure payment gateways, and intuitive inventory management.',
+    title: 'E-commerce Website Development',
+    description: 'Grow your digital retail presence with custom E-commerce Website Development, secure payments, automated inventory, and sub-second catalog speeds.',
     iconName: 'ShoppingBag',
     benefits: ['Secure checkout (Stripe/PayPal)', 'Advanced product filtering', 'Automated sales reports', 'Multi-currency support']
   },
   {
-    id: 'ui-ux',
-    title: 'UI/UX Design',
-    description: 'User-centric interfaces engineered through user research, interactive wireframing, and rigorous usability testing.',
+    id: 'mobile-app',
+    title: 'Mobile App Development',
+    description: 'Our custom Mobile App Development builds responsive, intuitive, and native-feeling iOS & Android mobile software for seamless touch-based operations.',
     iconName: 'Layers',
-    benefits: ['Persona mapping', 'Interactive animations', 'Tailored user flows', 'Accessibility audit (WCAG)']
+    benefits: ['Cross-platform scaling', 'Interactive touch flows', 'API & database integration', 'Push notification alerts']
   },
   {
     id: 'seo',
-    title: 'SEO Optimization',
-    description: 'On-page and off-page optimization strategies to elevate search presence, increase organic traffic, and secure top rankings.',
+    title: 'SEO Services',
+    description: 'Comprehensive SEO Services incorporating local search citations, semantic HTML markup, Google schema mapping, and performance tuning.',
     iconName: 'TrendingUp',
     benefits: ['Keyword taxonomy', 'Core Web Vitals tuning', 'Sitemap & robots configuration', 'Continuous analytics reporting']
   },
   {
     id: 'branding',
-    title: 'Branding & Logo Design',
-    description: 'Compelling brand strategy, visual identities, logos, and style guidelines that set your business apart in digital arenas.',
+    title: 'Digital Marketing Agency',
+    description: 'We act as your dedicated Digital Marketing Agency, integrating brand strategy, visual assets, analytics tracking, and social positioning for conversion.',
     iconName: 'Award',
     benefits: ['Custom vector logos', 'Color theory blueprinting', 'Typography pairings', 'Complete digital brand books']
   },
@@ -254,33 +254,33 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 
 export const WHY_CHOOSE_US_DATA = [
   {
-    title: 'Modern Designs',
-    description: 'We craft beautiful, visually distinctive interfaces that reinforce high brand authority and build trust instantly.',
+    title: 'Website Designer Excellence',
+    description: 'Work with a top-rated Website Designer to create bespoke, pixel-perfect user interfaces that build high brand authority and establish trust instantly.',
     icon: 'Sparkles'
   },
   {
-    title: 'Mobile Responsive',
-    description: 'Our layouts render flawlessly on mobile devices, small tablets, medium notebooks, and high-DPI desktop screens.',
+    title: 'Mobile App Development',
+    description: 'From native-grade Mobile App Development to responsive liquid web views, we build secure, touch-optimized software for all smartphones and tablets.',
     icon: 'Smartphone'
   },
   {
-    title: 'SEO Optimized',
-    description: 'We implement semantic index structures, meta tags, and structured schema so Google indexes and ranks you seamlessly.',
+    title: 'SEO Services & Strategy',
+    description: 'Our expert on-page and off-page SEO Services implement semantic HTML, local schemas, XML sitemaps, and robots.txt rules so Google ranks you prominently.',
     icon: 'Compass'
   },
   {
-    title: 'Fast Loading Websites',
-    description: 'We keep script payloads light, compress multimedia, use smart preloading, and target 95+ score on core Web Vitals.',
+    title: 'Web Development Services',
+    description: 'Our fast Web Development Services from a leading Website Development Company utilize React and code-splitting to ensure Google PageSpeed scores above 90.',
     icon: 'Zap'
   },
   {
-    title: 'Dedicated Support',
-    description: 'We don\'t disappear after launch. Our administrators support, patch, and scale your tech footprint continuously.',
+    title: 'E-commerce Website Development',
+    description: 'Comprehensive E-commerce Website Development support including secure payment gateways, database scale audits, and ongoing backend optimizations.',
     icon: 'LifeBuoy'
   },
   {
-    title: 'Affordable Pricing',
-    description: 'We deliver world-class digital agency engineering tailored to local and global budgets with fully transparent packages.',
+    title: 'Digital Marketing Agency',
+    description: 'As a full-stack Digital Marketing Agency, we offer flexible, result-driven conversion strategies tailored for maximum return on investment.',
     icon: 'DollarSign'
   }
 ];

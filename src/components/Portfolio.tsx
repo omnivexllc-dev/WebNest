@@ -48,7 +48,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-24 bg-slate-50 relative overflow-hidden bg-3d-blueprint">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/10 blur-3xl rounded-full pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-100/10 blur-3xl rounded-full pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -62,7 +62,7 @@ export default function Portfolio() {
           className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6"
         >
           <div>
-            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+            <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
               Portfolio Showcase
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -82,7 +82,7 @@ export default function Portfolio() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border cursor-pointer transition-all duration-300 ${
                 selectedCategory === cat
-                  ? 'bg-blue-600 border-blue-600 text-white shadow-md shadow-blue-500/15'
+                  ? 'bg-emerald-600 border-emerald-600 text-white shadow-md shadow-emerald-500/15'
                   : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:text-slate-900'
               }`}
             >
@@ -111,7 +111,7 @@ export default function Portfolio() {
                 className="perspective-1000 h-full"
               >
                 <ThreeDCard 
-                  className="group h-full bg-white border border-slate-200/60 rounded-3xl overflow-hidden hover:border-blue-600 transition-all duration-300 flex flex-col shadow-sm"
+                  className="group h-full bg-white border border-slate-200/60 rounded-3xl overflow-hidden hover:border-emerald-600 transition-all duration-300 flex flex-col shadow-sm"
                   intensity={12}
                 >
                   {/* Simulated Web Application Screen (Custom Styled Vector/Markup) */}
@@ -135,7 +135,7 @@ export default function Portfolio() {
                         <div className="space-y-3.5">
                           <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center justify-between">
                             <div className="flex items-center space-x-3">
-                              <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">🛒</div>
+                              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">🛒</div>
                               <div>
                                 <span className="text-xs font-semibold text-slate-200 block">Apex Premium Retail</span>
                                 <span className="text-[10px] text-slate-500 block">Sub-seconds catalog render</span>
@@ -164,7 +164,7 @@ export default function Portfolio() {
                               </div>
                               <div className="flex justify-between text-slate-300">
                                 <span>Structural CAD blueprint</span>
-                                <span className="font-bold text-blue-400">v3.4 synced</span>
+                                <span className="font-bold text-emerald-400">v3.4 synced</span>
                               </div>
                             </div>
                           </div>
@@ -175,7 +175,7 @@ export default function Portfolio() {
                         <div className="space-y-3.5">
                           <div className="bg-slate-900 border border-slate-800 p-2.5 rounded-xl text-center">
                             <span className="text-[10px] text-slate-500 block">SwiftInsure Engine</span>
-                            <span className="text-xs font-extrabold text-blue-400">Basic Tier Premium: $120 / Mo</span>
+                            <span className="text-xs font-extrabold text-emerald-400">Basic Tier Premium: $120 / Mo</span>
                           </div>
                           <div className="grid grid-cols-2 gap-2 text-center">
                             <div className="bg-slate-900 border border-slate-800 p-2 rounded-lg">
@@ -197,14 +197,14 @@ export default function Portfolio() {
                             <span className="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">+340 ticks/s</span>
                           </div>
                           <div className="flex gap-2 h-16 items-end justify-center">
-                            <div className="w-[12%] bg-blue-500/10 h-[25%] rounded-t" />
-                            <div className="w-[12%] bg-blue-500/25 h-[40%] rounded-t" />
-                            <div className="w-[12%] bg-blue-500/40 h-[35%] rounded-t" />
-                            <div className="w-[12%] bg-blue-500/60 h-[70%] rounded-t" />
-                            <div className="w-[12%] bg-blue-500/30 h-[50%] rounded-t" />
-                            <div className="w-[12%] bg-blue-500/75 h-[85%] rounded-t" />
-                            <div className="w-[12%] bg-blue-600 h-[100%] rounded-t relative">
-                              <span className="absolute -top-1 left-1/2 w-1.5 h-1.5 bg-sky-200 rounded-full inline-block -translate-x-1/2 animate-ping" />
+                            <div className="w-[12%] bg-emerald-500/10 h-[25%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-500/25 h-[40%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-500/40 h-[35%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-500/60 h-[70%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-500/30 h-[50%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-500/75 h-[85%] rounded-t" />
+                            <div className="w-[12%] bg-emerald-600 h-[100%] rounded-t relative">
+                              <span className="absolute -top-1 left-1/2 w-1.5 h-1.5 bg-emerald-200 rounded-full inline-block -translate-x-1/2 animate-ping" />
                             </div>
                           </div>
                         </div>
@@ -219,7 +219,7 @@ export default function Portfolio() {
                             </div>
                             <div className="flex justify-between items-center">
                               <span className="text-[10px] text-slate-500">Interactive Map Marker</span>
-                              <span className="text-[10px] font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Active Booking</span>
+                              <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Active Booking</span>
                             </div>
                           </div>
                         </div>
@@ -228,7 +228,7 @@ export default function Portfolio() {
                       {project.id === 'portfolio-6' && (
                         <div className="space-y-3">
                           <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center space-x-3.5">
-                            <div className="w-9 h-9 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-400">♥</div>
+                            <div className="w-9 h-9 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xs font-bold text-emerald-400">♥</div>
                             <div className="flex-1">
                               <span className="text-xs font-semibold text-slate-200 block">CarePulse Medical Portal</span>
                               <span className="text-[10px] text-emerald-400 block font-semibold font-mono">✓ Online Intake Complete</span>
@@ -248,10 +248,10 @@ export default function Portfolio() {
                   {/* Project Brief Info */}
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest block mb-1.5">
+                      <span className="text-[10px] font-extrabold text-emerald-600 uppercase tracking-widest block mb-1.5">
                         {project.category}
                       </span>
-                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 leading-snug mb-3">
+                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors duration-300 leading-snug mb-3">
                         {project.title}
                       </h3>
                       <p className="text-slate-500 text-xs leading-relaxed mb-6">
@@ -285,7 +285,7 @@ export default function Portfolio() {
 
                         <button
                           onClick={() => setActiveItem(project)}
-                          className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-slate-950 transition-colors duration-300 cursor-pointer"
+                          className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-emerald-600 hover:text-slate-950 transition-colors duration-300 cursor-pointer"
                         >
                           <span>Read Case Study</span>
                           <ChevronRight className="w-4 h-4" />
@@ -317,7 +317,7 @@ export default function Portfolio() {
                 {/* Header */}
                 <div className="bg-slate-900 p-6 text-white flex items-center justify-between">
                   <div>
-                    <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest">
+                    <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest">
                       {activeItem.category}
                     </span>
                     <h3 className="text-2xl font-bold leading-tight mt-1">
@@ -351,8 +351,8 @@ export default function Portfolio() {
                   )}
 
                   {activeItem.solution && (
-                    <div className="border-l-4 border-blue-600 bg-blue-50 p-4.5 rounded-r-xl">
-                      <span className="text-xs font-bold text-blue-700 uppercase tracking-widest block mb-1.5">Strategic Solution</span>
+                    <div className="border-l-4 border-emerald-600 bg-emerald-50 p-4.5 rounded-r-xl">
+                      <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1.5">Strategic Solution</span>
                       <p className="text-slate-600 text-sm leading-relaxed">
                         {activeItem.solution}
                       </p>
@@ -376,7 +376,7 @@ export default function Portfolio() {
                   <div className="grid grid-cols-2 gap-4 bg-slate-50 p-4.5 rounded-xl border border-slate-100">
                     <div>
                       <span className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Metrics Lifted</span>
-                      <span className="text-lg font-extrabold text-blue-600 block leading-tight mt-1">{activeItem.stats.value}</span>
+                      <span className="text-lg font-extrabold text-emerald-600 block leading-tight mt-1">{activeItem.stats.value}</span>
                       <span className="text-[10px] text-slate-500 block mt-0.5">{activeItem.stats.label}</span>
                     </div>
                     <div>
@@ -406,7 +406,7 @@ export default function Portfolio() {
                 <div className="p-6 border-t border-slate-100 bg-slate-50 flex justify-end">
                   <button
                     onClick={() => setActiveItem(null)}
-                    className="bg-slate-900 hover:bg-blue-600 text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
+                    className="bg-slate-900 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
                   >
                     Close Case Study
                   </button>

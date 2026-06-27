@@ -10,20 +10,20 @@ export interface ServiceArea {
 
 export const SEO_LOCAL_FAQS: FAQItem[] = [
   {
-    question: "Why should businesses in Durgapur choose bespoke web design over generic templates?",
-    answer: "Bespoke engineering bypasses the heavy code bloat inherent in off-the-shelf themes, yielding clean rendering and ultra-fast loading times. We build custom-tailored React interfaces that perform seamlessly on mixed cellular networks in West Bengal, increasing on-site visitor retention and driving direct business conversions."
+    question: "Why choose WebNest as your Website Development Company for custom Web Development Services?",
+    answer: "Bespoke Web Development Services from our leading Website Development Company bypass the heavy code bloat of generic template sites. We engineer custom-tailored, high-performing, and secure React-based web systems that load in milliseconds, optimize Core Web Vitals, and secure your long-term organic visibility on Google."
   },
   {
-    question: "How does WebNest optimize digital architectures for localized search authority?",
-    answer: "We implement Google-recommended on-page strategies including semantic structural hierarchies, JSON-LD local schema markup, highly responsive layouts, fast touch targets for mobile, and localized content mapping. This helps key regional search queries naturally discover your company's physical and digital presence."
+    question: "What makes working with a professional Website Designer critical for local businesses?",
+    answer: "A professional Website Designer ensures that your UI/UX layout is structured logically with fast touch targets, readable font pairings, and complete mobile-responsiveness. This minimizes bounce rates, engages local clients, and reinforces brand authority across all device screen configurations."
   },
   {
-    question: "Do you specialize in e-commerce structures for scaling companies?",
-    answer: "Yes. To satisfy the demands of modern commerce and manufacturing brands, we build robust headless e-commerce configurations. By decoupling catalog templates from backend transaction pipelines, we ensure lightning-fast checkouts, custom catalog rendering, and dependable cart performance under heavy visitor traffic."
+    question: "Do your E-commerce Website Development packages support complex sales workflows?",
+    answer: "Absolutely. Our custom E-commerce Website Development solutions decouple visual storefronts from backend inventory management, integrating payment gateways like Stripe or PayPal, generating automated sales spreadsheets, and supporting thousands of concurrent shoppers with zero slowdowns."
   },
   {
-    question: "Are in-person advisory sessions available across West Bengal?",
-    answer: "Yes, absolutely. WebNest is headquartered in the B-Zone region of Durgapur. Our senior team conducts face-to-face consultations for businesses throughout Durgapur, Asansol, Bankura, Burdwan, Haldia, Siliguri, and Kolkata, alongside modern video alignments for global developer and enterprise clients."
+    question: "How do your local SEO Services and Digital Marketing Agency strategies drive real growth?",
+    answer: "Our expert SEO Services incorporate local directory listings, structured business schemas, semantic HTML headers, and comprehensive keyword planning. As a full-service Digital Marketing Agency, we combine on-page search optimizations with branding and performance tracking to rank you higher on local search maps and maximize organic leads."
   }
 ];
 
@@ -38,24 +38,24 @@ export const SEO_SERVICE_AREAS: ServiceArea[] = [
 
 export const FAQ_PAGE_DATA: FAQItem[] = [
   {
-    question: "What professional web solutions does WebNest specialize in?",
-    answer: "WebNest is a comprehensive digital engineering and search performance agency. We architect custom responsive web applications, robust e-commerce engines, custom system modules, and modern search engine optimization programs. Every system we deliver is programmed natively to bypass slow templates, ensuring your visual presence behaves cleanly, scales reliably, and converts page visits into meaningful business conversions."
+    question: "What solutions does WebNest specialize in as a premier Website Development Company?",
+    answer: "WebNest is a premier Website Development Company and leading Digital Marketing Agency. We specialize in custom Web Development Services, bespoke Website Designer layouts, result-driven SEO Services, high-performance Mobile App Development, and secure E-commerce Website Development. Every platform we build is engineered natively to maximize organic search rankings, ensure sub-second rendering speeds, and drive visitor conversions."
   },
   {
-    question: "Why does custom react-based engineering outperform generic site builders?",
-    answer: "Ordinary drag-and-drop engines insert excessive, bloated script files and unoptimized stylesheets that negatively impact your page load times and Largest Contentful Paint (LCP) stats. We construct custom, lightweight React and Next.js architectures. This eliminates rendering latency, builds high shopper trust, and provides complete scalability to support custom APIs and databases as your operation grows."
+    question: "Why should we hire a specialized Website Designer rather than using generic template site builders?",
+    answer: "Bespoke engineering by a professional Website Designer and Developer bypasses heavy template bloat to yield clean code and ultra-fast loading speeds. Generic template builders insert unoptimized scripts that degrade your Largest Contentful Paint (LCP) stats. Our custom Web Development Services eliminate these bottlenecks, ensuring high search rankings, superior mobile user experiences, and seamless integrations with databases as your business scales."
   },
   {
-    question: "How do your technical SEO practices ensure sustainable organic traffic?",
-    answer: "Our search engine strategies focus on Google-compliant standards: lightning-fast core web vitals, correct semantic HTML5 tags, optimized WebP graphics, and precise local business schema tags. By targeting high-value localized searches and structuring content with logical clarity, we help search engines register your site's authority to achieve and protect prominent Google page-one search results."
+    question: "How do your technical SEO Services ensure sustainable organic traffic?",
+    answer: "Our professional SEO Services focus on Google's latest quality guidelines: lightning-fast Core Web Vitals, semantic HTML5 hierarchies, compressed WebP media elements, sitemap indexes, and clean JSON-LD structured schema. As a complete Digital Marketing Agency, we perform comprehensive keyword mapping to ensure search engines register your site's authority, boosting clicks and securing top search placements."
   },
   {
-    question: "What is your approach to building secure, high-conversion e-commerce portals?",
-    answer: "We engineer secure shopping experiences built around customer convenience. Our e-commerce configurations embed popular checkout gates, fluid inventory displays, predictive keyword search bars, and real-time database updates. Through performance tuning, we minimize purchase friction and optimize cart checkout success rates even during peak traffic spikes."
+    question: "What is your approach to secure E-commerce Website Development?",
+    answer: "Our custom E-commerce Website Development focuses on secure checkout structures, high-performance static product catalogs, automated stock syncing, and fluid payment gateways (like Stripe and PayPal). We decouple front-end catalogs from administrative inventory streams to ensure rapid product discovery, reducing cart friction and maximizing sales conversions."
   },
   {
-    question: "What does the typical custom design and development roadmap look like?",
-    answer: "Our standard engineering timeframe runs from 4 to 6 weeks, organized across 5 clear operational milestones: detailed Consultation & Discovery, comprehensive Wireframing & UX Prototyping, solid Front-End/Back-End Development, rigorous multi-device Quality Testing, followed by smooth Launch and ongoing monthly technical optimization."
+    question: "Do you provide custom Mobile App Development alongside web engineering?",
+    answer: "Yes, our team excels in cross-platform Mobile App Development for iOS and Android devices, alongside bespoke Web Development Services. We use high-performance frameworks and secure database APIs to deliver lightweight, highly responsive, and native-feeling mobile solutions suited to your business requirements."
   }
 ];
 

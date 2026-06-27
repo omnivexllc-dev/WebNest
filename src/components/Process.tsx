@@ -18,7 +18,7 @@ export default function Process() {
 
   return (
     <section id="process" className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-blue-100/5 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-emerald-100/5 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -31,7 +31,7 @@ export default function Process() {
           id="process-header"
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+          <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Our Strategy
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -63,7 +63,7 @@ export default function Process() {
                 onClick={() => setActiveStepIndex(index)}
                 className={`w-full text-left p-4.5 rounded-xl border flex items-center space-x-4 cursor-pointer transition-all duration-300 ${
                   activeStepIndex === index
-                    ? 'bg-white border-blue-600 shadow-xl shadow-blue-200/30 font-bold'
+                    ? 'bg-white border-emerald-600 shadow-xl shadow-emerald-200/30 font-bold'
                     : 'bg-transparent border-slate-200/60 hover:bg-white hover:border-slate-350'
                 }`}
               >
@@ -71,7 +71,7 @@ export default function Process() {
                 <div
                   className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-sm shrink-0 transition-colors duration-300 ${
                     activeStepIndex === index
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-emerald-600 text-white'
                       : 'bg-slate-200 text-slate-600'
                   }`}
                 >
@@ -82,7 +82,7 @@ export default function Process() {
                   <div className="flex justify-between items-center">
                     <span
                       className={`text-sm font-bold tracking-tight block truncate ${
-                        activeStepIndex === index ? 'text-blue-600' : 'text-slate-800'
+                        activeStepIndex === index ? 'text-emerald-600' : 'text-slate-800'
                       }`}
                     >
                       {step.title}
@@ -117,13 +117,13 @@ export default function Process() {
                 className="bg-white border border-slate-200/60 rounded-2xl p-8 shadow-2xl shadow-slate-200/40 relative"
               >
                 {/* Visual quote accent mark */}
-                <div className="absolute top-6 right-6 text-7xl font-sans text-blue-50 text-right select-none opacity-45 pointer-events-none">
+                <div className="absolute top-6 right-6 text-7xl font-sans text-emerald-50 text-right select-none opacity-45 pointer-events-none">
                   0{PROCESS_DATA[activeStepIndex].step}
                 </div>
 
-                <div className="flex items-center space-x-2 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full w-max mb-6">
-                  <Clock className="w-3.5 h-3.5 text-blue-600" />
-                  <span className="text-[10px] font-bold text-blue-900 uppercase tracking-wider">
+                <div className="flex items-center space-x-2 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full w-max mb-6">
+                  <Clock className="w-3.5 h-3.5 text-emerald-600" />
+                  <span className="text-[10px] font-bold text-emerald-900 uppercase tracking-wider">
                     TIMELINE: {PROCESS_DATA[activeStepIndex].duration}
                   </span>
                 </div>
@@ -165,7 +165,7 @@ export default function Process() {
 
                   <a
                     href="#contact"
-                    className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-slate-900 transition-colors duration-300"
+                    className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-emerald-600 hover:text-slate-900 transition-colors duration-300"
                   >
                     <span>Launch Inquiry Form</span>
                     <ChevronRight className="w-4 h-4" />

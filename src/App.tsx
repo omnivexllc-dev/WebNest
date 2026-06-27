@@ -95,11 +95,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-800 antialiased font-sans flex flex-col selection:bg-blue-600 selection:text-white">
+    <div className="bg-slate-50 min-h-screen text-slate-800 antialiased font-sans flex flex-col selection:bg-emerald-600 selection:text-white">
       {/* Scroll Progress Bar at the top of the viewport */}
       <div 
         id="scroll-progress" 
-        className="fixed top-0 left-0 h-1 bg-blue-600 z-[100] transition-all duration-100 ease-out pointer-events-none"
+        className="fixed top-0 left-0 h-1 bg-emerald-600 z-[100] transition-all duration-100 ease-out pointer-events-none"
         style={{ width: `${scrollProgress}%` }}
       />
 

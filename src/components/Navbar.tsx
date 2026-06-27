@@ -62,7 +62,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
           <div>
             <span className="text-2xl font-black tracking-tight block leading-none">
               <span className="text-[#04152d]">Web</span>
-              <span className="text-[#005eff]">Nest</span>
+              <span className="text-[#10b981]">Nest</span>
             </span>
             <span className="text-[8px] font-extrabold tracking-widest text-slate-400 block uppercase mt-0.5">
               Digital Studio
@@ -82,7 +82,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
               }}
               className={`text-sm font-medium tracking-wide transition-colors relative py-1.5 cursor-pointer block ${
                 activeSection === link.id
-                  ? 'text-blue-600 font-semibold'
+                  ? 'text-emerald-600 font-semibold'
                   : 'text-slate-600 hover:text-slate-950'
               }`}
             >
@@ -90,7 +90,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
               {activeSection === link.id && (
                 <motion.div
                   layoutId="activeNavLine"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 rounded-full"
                 />
               )}
             </a>
@@ -105,7 +105,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
               e.preventDefault();
               handleLinkClick('contact');
             }}
-            className="px-6 py-2.5 bg-blue-600 text-white text-xs font-extrabold uppercase tracking-widest rounded-full shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer inline-block"
+            className="px-6 py-2.5 bg-emerald-600 text-white text-xs font-extrabold uppercase tracking-widest rounded-full shadow-lg shadow-emerald-200/50 hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer inline-block"
           >
             Consultation
           </a>
@@ -115,7 +115,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
         <div id="mobile-toggle" className="lg:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-slate-700 hover:text-blue-600 focus:outline-none cursor-pointer"
+            className="text-slate-700 hover:text-emerald-600 focus:outline-none cursor-pointer"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -143,7 +143,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
                     handleLinkClick(link.id);
                   }}
                   className={`text-base font-semibold tracking-wide py-2 text-left cursor-pointer border-b border-slate-50 block ${
-                    activeSection === link.id ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
+                    activeSection === link.id ? 'text-emerald-600' : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   {link.name}
@@ -156,7 +156,7 @@ export default function Navbar({ onNavClick, activeSection, onStaffHubToggle }: 
                   e.preventDefault();
                   handleLinkClick('contact');
                 }}
-                className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 text-white text-sm font-semibold uppercase tracking-wider py-3.5 rounded-lg hover:bg-slate-900 transition-colors duration-300 text-center"
+                className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 text-white text-sm font-semibold uppercase tracking-wider py-3.5 rounded-lg hover:bg-slate-900 transition-colors duration-300 text-center"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight className="w-4 h-4" />
