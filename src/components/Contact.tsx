@@ -83,7 +83,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
   return (
     <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Decorative backdrop shapes */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100/10 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-100/10 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-slate-500/5 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
@@ -97,7 +97,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
           id="contact-header"
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+          <span className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -124,7 +124,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
             <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl relative overflow-hidden flex-1 flex flex-col justify-between">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
                      <div className="relative z-10">
-                <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest block mb-4">
+                <span className="text-indigo-400 text-[10px] font-bold uppercase tracking-widest block mb-4">
                   CONTACT DETAILS
                 </span>
                 <h3 className="text-2xl font-bold tracking-tight leading-snug mb-8">
@@ -136,7 +136,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                   
                   {/* Address */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-slate-800 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
+                    <div className="w-10 h-10 bg-slate-800 text-indigo-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -149,12 +149,12 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-slate-800 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
+                    <div className="w-10 h-10 bg-slate-800 text-indigo-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-400 block font-bold uppercase tracking-wider leading-none mb-1">Email Inquiry</span>
-                      <a href="mailto:webnestsupport@gmail.com" className="text-sm text-white font-semibold block hover:text-emerald-400 transition-colors duration-300">
+                      <a href="mailto:webnestsupport@gmail.com" className="text-sm text-white font-semibold block hover:text-indigo-400 transition-colors duration-300">
                         webnestsupport@gmail.com
                       </a>
                     </div>
@@ -162,12 +162,12 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
 
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-slate-800 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
+                    <div className="w-10 h-10 bg-slate-800 text-indigo-400 rounded-xl flex items-center justify-center shrink-0 border border-slate-700/60">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-400 block font-bold uppercase tracking-wider leading-none mb-1">Call Representative</span>
-                      <a href="tel:+917908774055" className="text-sm text-white font-semibold block hover:text-emerald-400 transition-colors duration-300">
+                      <a href="tel:+917908774055" className="text-sm text-white font-semibold block hover:text-indigo-400 transition-colors duration-300">
                         +91 79087 74055
                       </a>
                     </div>
@@ -182,7 +182,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                   href="https://wa.me/917908774055?text=Hi%20WebNest,%20I%20visited%20your%20website%20and%20would%20like%20a%20free%20consultation."
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-lg transition-colors duration-300 shadow-lg shrink-0"
+                  className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-lg transition-colors duration-300 shadow-lg shrink-0"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
                   <span>Chat on WhatsApp</span>
@@ -201,7 +201,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                     href="https://maps.google.com/?q=2/32+Bankim+Chandra+Avenue,+B-Zone,+Durgapur,+West+Bengal+713205"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center space-x-1 text-[11px] font-bold text-emerald-600 uppercase tracking-wide hover:text-slate-900 transition-colors"
+                    className="inline-flex items-center space-x-1 text-[11px] font-bold text-indigo-600 uppercase tracking-wide hover:text-slate-900 transition-colors"
                   >
                     <span>Google Maps link</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -209,9 +209,9 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                 </div>
 
                 {/* Simulated interactive map layout */}
-                <div className="w-full h-44 bg-emerald-50/70 border border-emerald-100/60 rounded-2xl relative overflow-hidden flex items-center justify-center select-none group">
+                <div className="w-full h-44 bg-indigo-50/70 border border-indigo-100/60 rounded-2xl relative overflow-hidden flex items-center justify-center select-none group">
                   {/* Styled vector grids and local roads simulations */}
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#e6f4ea_1px,transparent_1px),linear-gradient(to_bottom,#e6f4ea_1px,transparent_1px)] bg-[size:16px_16px] opacity-60" />
+                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0e7ff_1px,transparent_1px),linear-gradient(to_bottom,#e0e7ff_1px,transparent_1px)] bg-[size:16px_16px] opacity-60" />
                   <div className="absolute w-3/4 h-2 bg-amber-200/50 -rotate-12 top-10 left-4" />
                   <div className="absolute w-1/2 h-1 bg-amber-200/50 rotate-45 top-1/4 right-4" />
                   <div className="absolute w-5/6 h-2 md:h-3 bg-white rounded-full border border-slate-100 rotate-12 top-1/2 left-2" />
@@ -219,8 +219,8 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                   {/* Actual Location Pin layout */}
                   <div className="relative z-10 flex flex-col items-center">
                     <div className="relative">
-                      <MapPin className="w-8 h-8 text-emerald-600 animate-bounce" />
-                      <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-1.5 bg-emerald-600/20 blur-[1px] rounded-full inline-block" />
+                      <MapPin className="w-8 h-8 text-indigo-600 animate-bounce" />
+                      <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-1.5 bg-indigo-600/20 blur-[1px] rounded-full inline-block" />
                     </div>
                     <span className="bg-slate-900 border border-slate-800 text-white font-mono text-[9px] font-bold px-2 py-0.5 rounded shadow mt-2 leading-none">
                       WebNest Studio
@@ -255,9 +255,9 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <div className="flex items-center space-x-2 bg-emerald-50 border border-emerald-100/60 px-3 py-1.5 rounded-full w-max">
-                      <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-[10px] font-bold text-emerald-900 uppercase tracking-wider">
+                    <div className="flex items-center space-x-2 bg-indigo-50 border border-indigo-100/60 px-3 py-1.5 rounded-full w-max">
+                      <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                      <span className="text-[10px] font-bold text-indigo-900 uppercase tracking-wider">
                         Quick Service Dispatcher
                       </span>
                     </div>
@@ -277,7 +277,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
+                          className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
                           placeholder="Anoop Sharma"
                         />
                       </div>
@@ -292,7 +292,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
+                          className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
                           placeholder="anoop@agrogreen.in"
                         />
                       </div>
@@ -308,19 +308,19 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
+                          className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
                           placeholder="+91 79087 74055"
                         />
                       </div>
 
                       {/* WhatsApp Direct */}
                       <div className="flex flex-col justify-end">
-                        <label className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 flex items-center space-x-3 cursor-pointer hover:border-emerald-200 transition-colors duration-200 select-none h-[50px] shrink-0">
+                        <label className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 flex items-center space-x-3 cursor-pointer hover:border-indigo-200 transition-colors duration-200 select-none h-[50px] shrink-0">
                           <input
                             type="checkbox"
                             checked={formData.whatsapp}
                             onChange={(e) => setFormData({ ...formData, whatsapp: e.target.checked })}
-                            className="w-4 h-4 rounded text-emerald-600 border-slate-350 focus:ring-emerald-500 cursor-pointer"
+                            className="w-4 h-4 rounded text-indigo-600 border-slate-350 focus:ring-indigo-500 cursor-pointer"
                           />
                           <span className="text-xs font-semibold text-slate-700">Receive replies via WhatsApp</span>
                         </label>
@@ -336,7 +336,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-colors duration-300 focus:outline-none cursor-pointer"
+                          className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-colors duration-300 focus:outline-none cursor-pointer"
                         >
                           {servicesOption.map((service, index) => (
                             <option key={index} value={service}>
@@ -354,7 +354,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                         <select
                           value={formData.budget}
                           onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-colors duration-300 focus:outline-none cursor-pointer"
+                          className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-colors duration-300 focus:outline-none cursor-pointer"
                         >
                           <option value="Under ₹15,000">Under ₹15,000 (Basic Landing)</option>
                           <option value="₹15,000 - ₹35,000">₹15,000 - ₹35,000 (Standard Website)</option>
@@ -374,7 +374,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-slate-50 border border-slate-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
+                        className="w-full bg-slate-50 border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl px-4 py-3.5 text-slate-950 font-medium text-sm transition-all duration-300 focus:outline-none"
                         placeholder="Explain your goals, layout concepts, pages content, timeline requirements..."
                       />
                     </div>
@@ -390,7 +390,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 disabled:bg-emerald-400 text-white text-xs font-bold uppercase tracking-wider py-4 rounded-xl hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-300/60 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer shadow-lg shadow-emerald-200/50"
+                      className="w-full inline-flex items-center justify-center space-x-2 bg-indigo-600 disabled:bg-indigo-400 text-white text-xs font-bold uppercase tracking-wider py-4 rounded-xl hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-300/60 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer shadow-lg shadow-indigo-200/50"
                     >
                       {loading ? (
                         <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full block animate-spin" />
@@ -409,7 +409,7 @@ export default function Contact({ preselectedService = '' }: ContactProps) {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-16 space-y-6 flex flex-col items-center justify-center h-full"
                   >
-                    <div className="w-20 h-20 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center border border-emerald-100 mb-2">
+                    <div className="w-20 h-20 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center border border-indigo-100 mb-2">
                       <CheckCircle className="w-12 h-12" />
                     </div>
                     <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight leading-none">

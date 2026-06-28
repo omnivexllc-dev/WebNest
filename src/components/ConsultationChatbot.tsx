@@ -208,10 +208,10 @@ export default function ConsultationChatbot() {
           
           {/* Subtle blinking notification badge */}
           {!isOpen && (
-            <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full inline-block animate-ping" />
+            <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-indigo-500 border-2 border-white rounded-full inline-block animate-ping" />
           )}
           {!isOpen && (
-            <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full inline-block" />
+            <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-indigo-500 border-2 border-white rounded-full inline-block" />
           )}
 
           {/* Launcher Hover tooltip text */}
@@ -240,7 +240,7 @@ export default function ConsultationChatbot() {
                 <div>
                   <h4 className="text-sm font-bold block leading-none">WebNest</h4>
                   <div className="flex items-center space-x-1.5 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block animate-pulse" />
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">AI Consultant</span>
                   </div>
                 </div>

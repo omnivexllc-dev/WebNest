@@ -9,7 +9,7 @@ export default function LocalSEOSection() {
   return (
     <section id="local-hub" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200/50">
       {/* Decorative backdrop elements - modern slate styling */}
-      <div className="absolute top-1/3 right-12 w-96 h-96 bg-emerald-100/20 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 right-12 w-96 h-96 bg-indigo-100/20 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute bottom-10 left-12 w-80 h-80 bg-slate-200/40 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
@@ -22,7 +22,7 @@ export default function LocalSEOSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center space-x-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+          <span className="inline-flex items-center space-x-2 px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             <MapPin className="w-3.5 h-3.5" />
             <span>Local SEO & Web Authority</span>
           </span>
@@ -60,21 +60,21 @@ export default function LocalSEOSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-start space-x-2.5">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Keyword Mapping</span>
                     <span className="text-[11px] text-slate-500 block">Focused local intent keywords</span>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2.5">
-                  <Globe className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <Globe className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Schema Markup</span>
                     <span className="text-[11px] text-slate-500 block">Rich snippets & local cards</span>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2.5">
-                  <Smartphone className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <Smartphone className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Mobile Optimization</span>
                     <span className="text-[11px] text-slate-500 block">Tailored for fast rendering</span>
@@ -94,11 +94,11 @@ export default function LocalSEOSection() {
             <div className="bg-slate-900 text-white rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
               <div className="relative z-10">
-                <span className="text-[9px] text-emerald-400 font-extrabold tracking-widest uppercase block mb-2">Regional Coverage Map</span>
+                <span className="text-[9px] text-indigo-400 font-extrabold tracking-widest uppercase block mb-2">Regional Coverage Map</span>
                 <h4 className="text-lg font-bold mb-4 tracking-tight">Active Client Support Regions inside West Bengal</h4>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {SEO_SERVICE_AREAS.map((area, i) => (
-                    <div key={i} className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3 text-left hover:border-emerald-500 transition-all duration-300">
+                    <div key={i} className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3 text-left hover:border-indigo-500 transition-all duration-300">
                       <span className="text-xs font-bold text-white block mb-0.5">{area.city}</span>
                       <span className="text-[10px] text-slate-400 leading-tight block">{area.description}</span>
                     </div>
@@ -135,10 +135,10 @@ export default function LocalSEOSection() {
                         className="w-full flex justify-between items-center text-left px-5 py-4 cursor-pointer focus:outline-none"
                       >
                         <span className="text-sm font-bold text-slate-800 flex items-center pr-4">
-                          <HelpCircle className="w-4 h-4 text-emerald-600 mr-2.5 shrink-0" />
+                          <HelpCircle className="w-4 h-4 text-indigo-600 mr-2.5 shrink-0" />
                           {faq.question}
                         </span>
-                        <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-emerald-600' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-indigo-600' : ''}`} />
                       </button>
                       
                       <AnimatePresence initial={false}>

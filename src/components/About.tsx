@@ -23,7 +23,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Visual layouts decorative circles */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-emerald-100/10 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-indigo-100/10 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
@@ -38,7 +38,7 @@ export default function About() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="lg:col-span-6 space-y-6"
           >
-            <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-2">
+            <span className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest uppercase rounded-full mb-2">
               Our Agency
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -55,7 +55,7 @@ export default function About() {
 
             {/* Local Durgapur address details block inside about page */}
             <div className="bg-slate-50 border border-slate-200/60 p-5 rounded-2xl flex items-center space-x-3.5 max-w-lg">
-              <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0">
                 <MapPin className="w-5.5 h-5.5" />
               </div>
               <div>
@@ -97,10 +97,10 @@ export default function About() {
                       transition: { type: 'spring', stiffness: 100, damping: 15 }
                     }
                   }}
-                  className="bg-slate-50/70 hover:bg-white border border-slate-200/60 hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-200/30 p-6 rounded-2xl transition-all duration-300 flex items-start space-x-5 shadow-sm"
+                  className="bg-slate-50/70 hover:bg-white border border-slate-200/60 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-200/30 p-6 rounded-2xl transition-all duration-300 flex items-start space-x-5 shadow-sm"
                 >
                   <div className="w-12 h-12 bg-white text-slate-900 border border-slate-200/60 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                    <ValueIcon className="w-5.5 h-5.5 text-emerald-600" />
+                    <ValueIcon className="w-5.5 h-5.5 text-indigo-600" />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-slate-900 mb-1 leading-snug">

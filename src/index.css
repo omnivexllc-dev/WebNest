@@ -12,7 +12,7 @@ html {
 
 /* Hide default browser focus rings elegantly */
 *:focus-visible {
-  outline: 2px solid var(--color-emerald-600);
+  outline: 2px solid var(--color-indigo-600);
   outline-offset: 2px;
 }
 
@@ -38,18 +38,158 @@ html {
 
 /* Premium 3D Style System & Layering */
 .perspective-1000 {
-  perspective: 1000px;
+  perspective: var(--perspective-val, 1000px);
   transform-style: preserve-3d;
 }
 
 .perspective-2000 {
-  perspective: 2000px;
+  perspective: var(--perspective-val, 2000px);
+  transform-style: preserve-3d;
+}
+
+.perspective-dynamic {
+  perspective: var(--perspective-val, 1200px);
   transform-style: preserve-3d;
 }
 
 .preserve-3d {
   transform-style: preserve-3d;
   backface-visibility: hidden;
+}
+
+/* 3D Bobbing Physics Controls */
+.theme-no-bobbing .animate-3d-float,
+.theme-no-bobbing .animate-3d-isometric-float {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Full-fidelity Obsidian Cyber-Dark 3D Theme System */
+.theme-3d-dark {
+  --bg-primary: #030712; /* Gray 950 */
+  --bg-secondary: #0b0f19; /* Custom deep card background */
+  --bg-card: rgba(11, 15, 25, 0.9);
+  --border-color: rgba(129, 140, 248, 0.25); /* Soft indigo boundary line */
+  --text-primary: #f8fafc; /* Slate 50 */
+  --text-secondary: #94a3b8; /* Slate 400 */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom 3D Dark Theme background overrides */
+.theme-3d-dark .bg-white,
+.theme-3d-dark section.bg-white {
+  background-color: var(--bg-primary) !important;
+}
+
+.theme-3d-dark .bg-slate-50,
+.theme-3d-dark .bg-slate-50\/70,
+.theme-3d-dark section.bg-slate-50\/70 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Card glassmorphism overrides in 3D Dark theme */
+.theme-3d-dark .shadow-3d-card,
+.theme-3d-dark .bg-white .shadow-3d-card,
+.theme-3d-dark .bg-white .shadow-sm {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(99, 102, 241, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Secondary cards/inputs overrides */
+.theme-3d-dark .bg-slate-50\/50,
+.theme-3d-dark .bg-slate-100,
+.theme-3d-dark .bg-slate-100\/80,
+.theme-3d-dark .bg-slate-100\/50 {
+  background-color: #111827 !important; /* Gray 900 */
+  border-color: rgba(129, 140, 248, 0.12) !important;
+}
+
+/* Logo specific adjustments */
+.theme-3d-dark #main-navbar span.text-\[\#04152d\] {
+  color: #f8fafc !important;
+}
+
+/* Navigation scroll background overrides */
+.theme-3d-dark #main-navbar.bg-white\/80 {
+  background-color: rgba(3, 7, 18, 0.85) !important;
+  border-color: rgba(129, 140, 248, 0.12) !important;
+  backdrop-filter: blur(12px);
+}
+
+.theme-3d-dark #mobile-drawer {
+  background-color: #0b0f19 !important;
+  border-color: rgba(129, 140, 248, 0.12) !important;
+}
+
+.theme-3d-dark #mobile-drawer a {
+  border-color: rgba(129, 140, 248, 0.06) !important;
+}
+
+/* Text elements color adjustments */
+.theme-3d-dark .text-slate-900,
+.theme-3d-dark .text-slate-800,
+.theme-3d-dark .text-slate-700,
+.theme-3d-dark .text-slate-950 {
+  color: var(--text-primary) !important;
+}
+
+.theme-3d-dark .text-slate-500,
+.theme-3d-dark .text-slate-600 {
+  color: var(--text-secondary) !important;
+}
+
+/* Border lines color adjustments */
+.theme-3d-dark .border-slate-100,
+.theme-3d-dark .border-slate-200,
+.theme-3d-dark .border-slate-200\/60,
+.theme-3d-dark .border-slate-200\/50,
+.theme-3d-dark .divide-slate-200 > * {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Enhanced 3D glowing lines blueprint for Dark theme */
+.theme-3d-dark .bg-3d-blueprint {
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+}
+
+/* Floating visual backdrops */
+.theme-3d-dark .bg-indigo-50\/55,
+.theme-3d-dark .bg-indigo-50\/40,
+.theme-3d-dark .bg-indigo-50\/10 {
+  background-color: rgba(99, 102, 241, 0.06) !important;
+}
+
+.theme-3d-dark .bg-violet-200\/35,
+.theme-3d-dark .bg-indigo-200\/20 {
+  background-color: rgba(139, 92, 246, 0.06) !important;
+}
+
+/* Inputs, textareas & form buttons */
+.theme-3d-dark input[type="text"],
+.theme-3d-dark input[type="email"],
+.theme-3d-dark input[type="tel"],
+.theme-3d-dark select,
+.theme-3d-dark textarea {
+  background-color: #0b0f19 !important;
+  border-color: rgba(129, 140, 248, 0.2) !important;
+  color: #f8fafc !important;
+}
+
+.theme-3d-dark input[type="text"]:focus,
+.theme-3d-dark input[type="email"]:focus,
+.theme-3d-dark input[type="tel"]:focus,
+.theme-3d-dark select:focus,
+.theme-3d-dark textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.2) !important;
 }
 
 /* 3D Glassmorphism Card with deep dimensional shadow mapping */
@@ -64,8 +204,8 @@ html {
 
 .shadow-3d-glow {
   box-shadow: 
-    0 20px 40px -15px rgba(16, 185, 129, 0.25),
-    0 1px 3px rgba(16, 185, 129, 0.1),
+    0 20px 40px -15px rgba(99, 102, 241, 0.25),
+    0 1px 3px rgba(99, 102, 241, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -73,8 +213,8 @@ html {
 .bg-3d-blueprint {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
 }
 
 /* Realistic 3D Bobbing Float Animations */

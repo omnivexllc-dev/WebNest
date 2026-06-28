@@ -32,13 +32,13 @@ export default function Services({ onServiceSelect }: ServicesProps) {
   return (
     <section id="services" className="py-24 bg-white relative overflow-hidden bg-3d-blueprint">
       {/* Decorative backdrop elements */}
-      <div className="absolute top-1/4 left-0 w-80 h-80 bg-emerald-50/40 rounded-full blur-3xl pointer-events-none -translate-x-1/2" />
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-indigo-50/40 rounded-full blur-3xl pointer-events-none -translate-x-1/2" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-slate-50 rounded-full blur-3xl pointer-events-none translate-x-1/3" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         {/* Header Section */}
         <div id="services-header" className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
+          <span className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest uppercase rounded-full mb-3">
             Our Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
@@ -68,18 +68,18 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                 className="perspective-1000 h-full"
               >
                 <ThreeDCard 
-                  className="group h-full bg-white border border-slate-200/60 rounded-3xl p-6 hover:border-emerald-600 transition-all duration-300 flex flex-col justify-between shadow-sm shadow-slate-100"
+                  className="group h-full bg-white border border-slate-200/60 rounded-3xl p-6 hover:border-indigo-600 transition-all duration-300 flex flex-col justify-between shadow-sm shadow-slate-100"
                   intensity={10}
                 >
                   <div className="flex flex-col justify-between h-full">
                     <div>
                       {/* Service Icon inside themed wrapper */}
-                      <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6 shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                      <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                         <IconComponent className="w-6 h-6" />
                       </div>
 
                       {/* Service Title */}
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors duration-300 mb-3 leading-snug">
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors duration-300 mb-3 leading-snug">
                         {service.title}
                       </h3>
 
@@ -92,7 +92,7 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                       <ul className="space-y-2 mb-8" style={{ transform: 'translateZ(15px)' }}>
                         {service.benefits.map((benefit, bIndex) => (
                           <li key={bIndex} className="flex items-start space-x-2">
-                            <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                            <Check className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
                             <span className="text-xs font-semibold text-slate-600">
                               {benefit}
                             </span>
@@ -104,7 +104,7 @@ export default function Services({ onServiceSelect }: ServicesProps) {
                     {/* Submit action trigger */}
                     <button
                       onClick={() => onServiceSelect?.(service.title)}
-                      className="w-full text-center text-xs font-bold uppercase tracking-wider py-3.5 border border-slate-200 text-slate-700 hover:text-white hover:bg-emerald-600 hover:border-emerald-600 rounded-xl transition-all duration-300 cursor-pointer"
+                      className="w-full text-center text-xs font-bold uppercase tracking-wider py-3.5 border border-slate-200 text-slate-700 hover:text-white hover:bg-indigo-600 hover:border-indigo-600 rounded-xl transition-all duration-300 cursor-pointer"
                       style={{ transform: 'translateZ(20px)' }}
                     >
                       Request Consultation

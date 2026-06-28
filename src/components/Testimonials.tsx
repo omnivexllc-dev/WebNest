@@ -9,7 +9,7 @@ export default function Testimonials() {
   const PARTNERS = [
     { name: 'ApexRetail', icon: ShoppingBag, color: 'text-blue-600' },
     { name: 'Vanguard Builders', icon: Building2, color: 'text-amber-500' },
-    { name: 'SwiftInsure', icon: ShieldCheck, color: 'text-emerald-500' },
+    { name: 'SwiftInsure', icon: ShieldCheck, color: 'text-indigo-500' },
     { name: 'Zenith Analytics', icon: TrendingUp, color: 'text-indigo-500' },
     { name: 'LuxeSpace Real Estate', icon: Home, color: 'text-rose-500' },
     { name: 'CarePulse Medical', icon: Activity, color: 'text-cyan-500' },

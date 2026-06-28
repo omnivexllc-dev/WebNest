@@ -9,8 +9,8 @@ interface WebNestLogoProps {
 export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }: WebNestLogoProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Dynamic branding glow coordinates - reimagined as emerald/mint
-  const glowColor = isDark ? 'rgba(16, 185, 129, 0.85)' : 'rgba(5, 150, 105, 0.6)';
+  // Dynamic branding glow coordinates - reimagined as electric indigo
+  const glowColor = isDark ? 'rgba(99, 102, 241, 0.85)' : 'rgba(79, 70, 229, 0.6)';
 
   return (
     <motion.div
@@ -53,7 +53,7 @@ export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }:
           rotateY: [0, 4, -4, 0],
           rotateX: [0, -3, 3, 0],
           rotateZ: 0,
-          filter: `drop-shadow(0 4px 10px rgba(16, 185, 129, 0.08))`,
+          filter: `drop-shadow(0 4px 10px rgba(99, 102, 241, 0.08))`,
         }}
         transition={isHovered ? {
           type: 'spring',
@@ -84,7 +84,7 @@ export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }:
             />
           </filter>
 
-          {/* Golden Hour / Digital Mint-Green Neon Gradient */}
+          {/* Golden Hour / Digital Violet-Indigo Neon Gradient */}
           <motion.linearGradient 
             id="logoLeftGradient" 
             x1="0%" 
@@ -103,18 +103,18 @@ export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }:
               ease: "easeInOut"
             }}
           >
-            <stop offset="0%" stopColor="#4ade80" />
-            <stop offset="55%" stopColor="#10b981" />
-            <stop offset="100%" stopColor="#047857" />
+            <stop offset="0%" stopColor="#818cf8" />
+            <stop offset="55%" stopColor="#6366f1" />
+            <stop offset="100%" stopColor="#4338ca" />
           </motion.linearGradient>
 
-          {/* Shadow Overlay Folds in Dark Green */}
+          {/* Shadow Overlay Folds in Dark Purple */}
           <linearGradient id="logoShadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#022c22" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#011f18" stopOpacity="0" />
+            <stop offset="0%" stopColor="#1e1b4b" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#0f172a" stopOpacity="0" />
           </linearGradient>
 
-          {/* High Intensity Emerald-Teal fold gradient */}
+          {/* High Intensity Violet-Teal fold gradient */}
           <motion.linearGradient 
             id="logoMiddleGradient" 
             x1="0%" 
@@ -131,13 +131,13 @@ export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }:
               ease: "easeInOut"
             }}
           >
-            <stop offset="0%" stopColor="#14b8a6" />
-            <stop offset="35%" stopColor="#0d9488" />
-            <stop offset="70%" stopColor="#064e3b" />
-            <stop offset="100%" stopColor="#022c22" />
+            <stop offset="0%" stopColor="#a78bfa" />
+            <stop offset="35%" stopColor="#8b5cf6" />
+            <stop offset="70%" stopColor="#4c1d95" />
+            <stop offset="100%" stopColor="#2e1065" />
           </motion.linearGradient>
 
-          {/* Extreme metallic neon lime/emerald gradient */}
+          {/* Extreme metallic neon violet/purple gradient */}
           <motion.linearGradient 
             id="logoRightGradient" 
             x1="0%" 
@@ -154,9 +154,9 @@ export default function WebNestLogo({ className = 'w-10 h-10', isDark = false }:
               ease: "easeInOut"
             }}
           >
-            <stop offset="0%" stopColor="#a7f3d0" />
-            <stop offset="50%" stopColor="#10b981" />
-            <stop offset="100%" stopColor="#064e3b" />
+            <stop offset="0%" stopColor="#ddd6fe" />
+            <stop offset="50%" stopColor="#8b5cf6" />
+            <stop offset="100%" stopColor="#3b0764" />
           </motion.linearGradient>
 
           {/* Glowing Aura Gradient */}

@@ -38,7 +38,7 @@ interface TeamMember {
 }
 
 const INITIAL_MEMBERS: TeamMember[] = [
-  { name: 'Arijit Sen', role: 'Lead Web Engineer', avatarColor: 'bg-emerald-500' },
+  { name: 'Arijit Sen', role: 'Lead Web Engineer', avatarColor: 'bg-indigo-500' },
   { name: 'Priya Mukherjee', role: 'UI/UX Craft Director', avatarColor: 'bg-blue-500' },
   { name: 'System Administrator', role: 'DevOps & Security', avatarColor: 'bg-violet-600' },
   { name: 'Rohan Shaw', role: 'Full-Stack Developer', avatarColor: 'bg-orange-500' }
@@ -202,7 +202,7 @@ WebNest Engineering Team`;
                 <span className="text-[10px] bg-blue-500/20 text-blue-400 font-bold px-2 py-0.5 rounded uppercase tracking-wider">
                   WORKSPACE PORTAL
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
               </div>
               <h2 className="text-xl sm:text-2xl font-black mt-0.5 tracking-tight">
                 Co-worker Operations & Trust Desk
@@ -343,7 +343,7 @@ WebNest Engineering Team`;
                 >
                   {copiedDraft ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-emerald-400 animate-scale" />
+                      <Check className="w-3.5 h-3.5 text-indigo-400 animate-scale" />
                       <span>Copied Draft!</span>
                     </>
                   ) : (
@@ -366,10 +366,10 @@ WebNest Engineering Team`;
               <AnimatePresence>
                 {sentToLog && (
                   <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
+                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    className="absolute -top-3 left-4 right-4 bg-emerald-600 text-white text-xs px-3 py-2 rounded-xl text-center font-bold flex items-center justify-center gap-1.5 shadow-lg"
+                    className="absolute -top-3 left-4 right-4 bg-indigo-600 text-white text-xs px-3 py-2 rounded-xl text-center font-bold flex items-center justify-center gap-1.5 shadow-lg"
                   >
                     <ShieldCheck className="w-4 h-4 text-white" />
                     <span>Notification sent! DevOps task has been generated.</span>
@@ -383,7 +383,7 @@ WebNest Engineering Team`;
           <div className="lg:col-span-7 p-6 sm:p-8 bg-slate-50/40 flex flex-col h-full overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded uppercase tracking-wider mr-2 inline-block">
+                <span className="text-[10px] bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded uppercase tracking-wider mr-2 inline-block">
                   Collaborative board
                 </span>
                 <span className="text-xs text-slate-400 font-medium">Keep Everything Organized</span>

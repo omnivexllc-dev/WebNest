@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Services from './components/Services.tsx';
@@ -13,12 +14,18 @@ import Footer from './components/Footer.tsx';
 import ConsultationChatbot from './components/ConsultationChatbot.tsx';
 import FAQSection from './components/FAQSection.tsx';
 import StaffHub from './components/StaffHub.tsx';
+import DimensionController from './components/DimensionController.tsx';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
   const [preselectedService, setPreselectedService] = useState<string>('');
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [isStaffHubOpen, setIsStaffHubOpen] = useState<boolean>(false);
+  
+  // Immersive 3D Dimension & Theme states
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [perspective, setPerspective] = useState<number>(1200);
+  const [isFloatingShapesActive, setIsFloatingShapesActive] = useState<boolean>(true);
 
   // Track page scroll progress for visual feedback
   useEffect(() => {
@@ -95,49 +102,70 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-800 antialiased font-sans flex flex-col selection:bg-emerald-600 selection:text-white">
+    <div 
+      className={`min-h-screen text-slate-800 antialiased font-sans flex flex-col selection:bg-indigo-600 selection:text-white transition-colors duration-500 overflow-x-hidden ${
+        theme === 'dark' ? 'theme-3d-dark bg-slate-950' : 'bg-slate-50'
+      } ${!isFloatingShapesActive ? 'theme-no-bobbing' : ''}`}
+      style={{ 
+        '--perspective-val': `${perspective}px`,
+        perspective: `${perspective}px`,
+        transformStyle: 'preserve-3d'
+      } as any}
+    >
       {/* Scroll Progress Bar at the top of the viewport */}
       <div 
         id="scroll-progress" 
-        className="fixed top-0 left-0 h-1 bg-emerald-600 z-[100] transition-all duration-100 ease-out pointer-events-none"
+        className="fixed top-0 left-0 h-1 bg-indigo-600 z-[100] transition-all duration-100 ease-out pointer-events-none"
         style={{ width: `${scrollProgress}%` }}
       />
 
       {/* Dynamic sticky Navigation Menu */}
       <Navbar onNavClick={handleNavClick} activeSection={activeSection} onStaffHubToggle={() => setIsStaffHubOpen(true)} />
 
-      {/* Main coordinates stack */}
-      <main className="flex-1">
-        {/* Landing Hero */}
-        <Hero onCtaClick={handleNavClick} />
+      {/* Main coordinates stack wrapped in a beautiful 3D spin rotation */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={theme}
+          initial={{ opacity: 0.9, rotateY: -10, scale: 0.97 }}
+          animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+          exit={{ opacity: 0.9, rotateY: 10, scale: 0.97 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+          className="flex-1 origin-center"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          <main className="flex-1">
+            {/* Landing Hero */}
+            <Hero onCtaClick={handleNavClick} />
 
-        {/* Agency Capabilities Index */}
-        <Services onServiceSelect={handleServiceSelect} />
+            {/* Agency Capabilities Index */}
+            <Services onServiceSelect={handleServiceSelect} />
 
-        {/* Dynamic Case Studies */}
-        <Portfolio />
+            {/* Dynamic Case Studies */}
+            <Portfolio />
 
-        {/* Why Choose Us Grid */}
-        <WhyChooseUs />
+            {/* Why Choose Us Grid */}
+            <WhyChooseUs />
 
-        {/* Sequential Process Map */}
-        <Process />
+            {/* Sequential Process Map */}
+            <Process />
 
-        {/* Narrative bio introducing location */}
-        <About />
+            {/* Narrative bio introducing location */}
+            <About />
 
-        {/* Micro slider client testimonials */}
-        <Testimonials />
+            {/* Micro slider client testimonials */}
+            <Testimonials />
 
-        {/* Informative FAQ & Knowledge Base Content Block (Over 400 highly optimized text words) */}
-        <FAQSection />
+            {/* Informative FAQ & Knowledge Base Content Block (Over 400 highly optimized text words) */}
+            <FAQSection />
 
-        {/* Local SEO & Web Authority Section */}
-        <LocalSEOSection />
+            {/* Local SEO & Web Authority Section */}
+            <LocalSEOSection />
 
-        {/* Submissions form & fallback maps card */}
-        <Contact preselectedService={preselectedService} />
-      </main>
+            {/* Submissions form & fallback maps card */}
+            <Contact preselectedService={preselectedService} />
+          </main>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Structured footer with legal indicators */}
       <Footer onNavClick={handleNavClick} onStaffHubToggle={() => setIsStaffHubOpen(true)} />
@@ -147,6 +175,16 @@ export default function App() {
 
       {/* Shared Staff/Co-worker Workspace Operations Hub overlay */}
       <StaffHub isOpen={isStaffHubOpen} onClose={() => setIsStaffHubOpen(false)} />
+
+      {/* Immersive 3D Dimension Control Panel */}
+      <DimensionController 
+        theme={theme}
+        setTheme={setTheme}
+        perspective={perspective}
+        setPerspective={setPerspective}
+        isFloatingShapesActive={isFloatingShapesActive}
+        setIsFloatingShapesActive={setIsFloatingShapesActive}
+      />
     </div>
   );
 }

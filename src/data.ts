@@ -70,102 +70,70 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Express', 'Stripe API', 'Redis'],
     stats: { label: 'Cart Abandonment Drop', value: '-45%' },
     status: 'Completed',
-    challenge: 'ApexRetail suffered from a high shopping cart abandonment rate (68%) triggered by slow product catalog rendering speeds (4.8s page load times) and fragmented payment integrations that periodically dropped connection during peak sales periods.',
+    challenge: 'ApexRetail (owned by Apex Group plc, Retail Sector) suffered from a high shopping cart abandonment rate (68%) triggered by slow product catalog rendering speeds (4.8s page load times) and fragmented payment integrations that periodically dropped connections during peak sales periods.',
     solution: 'We engineered a React-based headless frontend combined with an Express API proxy, integrated global CDN caching for catalog listings, set up Redis-backed inventory sync, and deployed Stripe Checkout with automated payment retry routines.',
     results: [
+      'Project Timeline: Delivered fully in 5 weeks',
       'Reduced global page load speed from 4.8s down to a steady 1.1s',
-      'Lowered cart abandonment rates from 68% to 23%, boosting net revenue by 32%',
+      'Lowered cart abandonment rates from 68% to 23%, boosting net sales revenue by 32%',
       'Safely processed over 50,000 concurrent checkout attempts during holiday sales events without failure'
     ]
   },
   {
     id: 'portfolio-2',
-    title: 'Vanguard Construction Portal',
-    category: 'Enterprise Portal',
-    description: 'A heavy-equipment coordination, project scheduling, and digital blueprint compliance suite designed for offline field foremen.',
-    longDescription: 'Vanguard Builders required a unified enterprise platform to synchronize raw building logs, active materials dispatch, blueprint file changes, and safety checklists between field construction staff and corporate managers.',
-    image: 'Enterprise structural workflow manager with interactive schedule timelines',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'Node.js', 'PostgreSQL'],
-    stats: { label: 'Idle Delay Reduction', value: '34%' },
+    title: 'FinTrust Global Banking Portal',
+    category: 'Fintech / Insurtech',
+    description: 'A lightning-fast banking eligibility calculator and customer onboarding suite that processes complex risk and regulatory vectors in under 30 seconds.',
+    longDescription: 'FinTrust International required a highly secure, high-performance customer onboarding engine to calculate dynamic credit ratings, parse complex loan qualification questionnaires, and output customized banking tiers instantly.',
+    image: 'Minimalist insurtech onboarding interface featuring dynamic calculation components',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Express API', 'D3.js'],
+    stats: { label: 'Onboarding Costs', value: '-58%' },
     status: 'Completed',
-    challenge: 'Vanguard Builders lacked unified dispatch tracking for their expensive fleet of construction apparatus, resulting in costly operator idle delays, missing material checklists, and manual paper blueprints that quickly became stale.',
-    solution: 'We developed an offline-first Progressive Web App (PWA) incorporating local storage sync via IndexedDB, custom dispatch scheduling layouts, and high-performance interactive blueprint viewers with real-time vector annotations.',
+    challenge: 'FinTrust International\'s legacy retail banking onboarding pipeline took up to 3 business days, requiring extensive human phone call verifications and exhaustive manual risk worksheets, losing dozens of qualified credit card and loan applicants daily.',
+    solution: 'We engineered an interactive secure wizard with real-time risk evaluation calculators, customized validation APIs, secure encrypted payload storage, and clean dynamic visual data charts to guide banking candidates.',
     results: [
-      'Eliminated 100% of physical paper logging sheets, replacing them with offline-first tablet interfaces',
-      'Saved an estimated $120,000 per multi-acre project site by optimizing heavy-equipment dispatching',
-      'Increased site safety checklist submission compliance logs by over 400%'
+      'Project Timeline: Developed and deployed in 8 weeks',
+      'Successfully pre-qualified 92% of new applicants automatically without manual representative audits',
+      'Reduced average onboarding cost overhead by 58% in the first quarter post-launch',
+      'Boosted first-time login and digital bank account activations by 210%'
     ]
   },
   {
     id: 'portfolio-3',
-    title: 'SwiftInsure Quote Engine',
-    category: 'Fintech / Insurtech',
-    description: 'A lightning-fast insurance quote estimator that calculates dynamic eligibility criteria, risk factors, and policy estimates in under 30 seconds.',
-    longDescription: 'SwiftInsure digital onboarding system processes complicated, regulated questionnaires through dynamic mathematical formula blocks to output customizable coverage tiers with instant pricing.',
-    image: 'Minimalist insurtech onboarding interface featuring dynamic calculation components',
-    tech: ['React', 'Highcharts', 'Tailwind CSS', 'Zustand', 'Express API'],
-    stats: { label: 'Onboarding Duration', value: '< 30s' },
+    title: 'AeroSync Aviation Logistics & Ground Dispatch',
+    category: 'Enterprise Portal',
+    description: 'A heavy-equipment coordination, flight dispatch, and ground support portal for airport terminal operations.',
+    longDescription: 'AeroSync Aviation ground managers required a unified enterprise terminal system to synchronize active airplane refueling logs, materials dispatch, compliance forms, and safety check procedures across runways.',
+    image: 'Enterprise structural workflow manager with interactive schedule timelines',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'Node.js', 'PostgreSQL'],
+    stats: { label: 'Ground Idle Delays', value: '-34%' },
     status: 'Completed',
-    challenge: 'Traditional insurance quote qualification at SwiftInsure took up to 3 business days, requiring extensive client phone calls and exhaustive manual risk worksheets, which lost dozens of prospective online conversions daily.',
-    solution: 'We engineered an interactive multi-step calculator with customizable, high-speed calculation logic. It parses risk datasets instantly and presents detailed options with rich visual charts illustrating premium benefits.',
+    challenge: 'AeroSync airport operators lacked centralized coordination for runway fueling vehicles and baggage lifters, causing aircraft turnaround delays and high fuel burn rates on terminal aprons.',
+    solution: 'We developed an offline-first mobile-responsive progressive web interface incorporating robust local storage synchronization via IndexedDB, custom dispatch scheduling timelines, and high-frequency real-time ground alerts.',
     results: [
-      'Successfully qualified 92% of users automatically without human agent intervention required',
-      'Expanded total weekly premium quote registrations by 210%',
-      'Decreased user onboarding costs by 58% in the first three months of operation'
+      'Project Timeline: Completed and launched in 10 weeks',
+      'Reduced aircraft ground idle turnaround delays by 34% across 4 major terminal hubs',
+      'Saved an estimated $240,000 per airport terminal per year in operating overhead costs',
+      'Achieved a 400% increase in timely ground safety pre-clearance logs compliance'
     ]
   },
   {
     id: 'portfolio-4',
-    title: 'Zenith Stock Analytics Platform',
+    title: 'HimalayaFresh FMCG Supply Chain Hub',
     category: 'SaaS Platform',
-    description: 'A high-velocity transaction and analytical telemetry dashboard mapping live market ticks, portfolios, and automatic asset alert tracking.',
-    longDescription: 'Zenith requested a high-performance web dashboard capable of plotting real-time stock indexes, executing instant portfolio stress tests, and dispatching alert notifications to hundreds of active traders with zero buffer latency.',
+    description: 'A high-velocity transaction and analytical supply coordinator mapping direct supplier-to-retailer distribution channels.',
+    longDescription: 'HimalayaFresh (Fast Moving Consumer Goods) requested a high-performance web dashboard capable of plotting real-time supplier stocks, logistics transit, and automated inventory allocation rules with zero buffer latency.',
     image: 'Financial market analysis module displaying multiple color-coded candles and indexes',
-    tech: ['React', 'TypeScript', 'D3.js', 'WebSockets', 'Web Workers', 'Express'],
-    stats: { label: 'Chart Render Delay', value: '< 8ms' },
+    tech: ['React', 'TypeScript', 'WebSockets', 'Web Workers', 'Express', 'Redis'],
+    stats: { label: 'Transit Delay Drop', value: '-42%' },
     status: 'Completed',
-    challenge: 'Plotting multiple high-frequency stock tickers streams over WebSockets caused severe browser thread blocking and UI freezing on typical laptop displays.',
-    solution: 'We designed a custom rendering pipeline offloading intense mathematical analysis to background Web Workers, updating an optimized canvas layer with dynamic virtualized tables to limit repaints.',
+    challenge: 'FMCG distribution managers faced severe tracking delays in bulk dairy and fresh product shipments, resulting in spoilage and stockouts across hundreds of active retail stores.',
+    solution: 'We built a high-speed supply chain telemetry platform that updates inventory levels in real-time over WebSockets, optimizing delivery routes and predicting supplier deficits using integrated scheduling analytics.',
     results: [
-      'Achieved a super-responsive tick render speed of under 8 milliseconds at 10,000 ticks/sec',
-      'Allowed client portfolios mock audits to calculate in under 120ms with Rust-compiled assemblies',
-      'Scaled system architecture to easily support up to 15,000 daily concurrent traders'
-    ]
-  },
-  {
-    id: 'portfolio-5',
-    title: 'LuxeSpace Intelligent Real Estate Portal',
-    category: 'Web Application',
-    description: 'An immersive digital listing search engine with vector masterplans, structural layout maps, and online agent booking triggers.',
-    longDescription: 'LuxeSpace is a premium residential property agency. We designed a gorgeous, typography-led real estate experience enabling high-net-worth buyers to filter available units via interactive maps and schedule private viewings instantly.',
-    image: 'Elegant real estate catalog highlighting luxury real-estate with custom maps',
-    tech: ['Next.js', 'Tailwind CSS', 'Google Maps API', 'Framer Motion', 'MongoDB'],
-    stats: { label: 'Lead Conversions', value: '+54%' },
-    status: 'Completed',
-    challenge: 'Property searchers felt traditional gallery grids were sterile and unhelpful, lacking real-world geographical perspective and neighborhood context required for premium high-investment purchases.',
-    solution: 'We integrated modern, beautifully stylized map overlays tracking local points of interest, nearby educational facilities, and interactive floor plans showing accurate sun exposure angles.',
-    results: [
-      'Grew scheduled physical site tours by 54% due to immersive map filters',
-      'Assisted in selling out a $45M luxury condominium community 2 months ahead of target schedule',
-      'Increased average prospective buyer session time on site to over 6 minutes'
-    ]
-  },
-  {
-    id: 'portfolio-6',
-    title: 'CarePulse Integrated Medical Clinic Suite',
-    category: 'Healthcare Solution',
-    description: 'A secure, HIPAA-compliant patient dashboard streamlining check-in forms, doctor availability, and online medical history management.',
-    longDescription: 'CarePulse required an incredibly simple, accessible patient portal to automate lobby check-ins, medical questionnaires, and direct physician calendar reservations without manual administrative overhead.',
-    image: 'Patient dashboard interface displaying upcoming medical checkups and logs',
-    tech: ['React', 'Tailwind CSS', 'Calendar Sync API', 'Express', 'NodeMailer', 'Supabase'],
-    stats: { label: 'Intake Processing', value: '-80% Time' },
-    status: 'Completed',
-    challenge: 'Long check-in queues, back-and-forth scheduling phone calls, and manual transcription of messy paper forms resulted in clinician fatigue and elevated data transcription errors.',
-    solution: 'We built an ultra-clean, high-contrast, accessible patient dashboard coupled with dynamic intake validations, deep doctor-calendar syncing, and automated SMS reminder streams.',
-    results: [
-      'Reduced typical lobby patience intake registration times from 20 minutes to under 4 minutes',
-      'Lowered appointment cancellations and missed appointments by 67% using automated smart reminders',
-      'Saved administrative staff an estimated 22 hours per week in patient check-in duties'
+      'Project Timeline: Delivered fully in 6 weeks',
+      'Reduced transit distribution delays from farm-to-shelf by 42%',
+      'Improved inventory shipping accuracy to an unprecedented 99.8% across West Bengal',
+      'Boosted direct retail distributor enrollment by 145% in the first 90 days'
     ]
   }
 ];
